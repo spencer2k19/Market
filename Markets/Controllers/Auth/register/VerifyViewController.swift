@@ -41,6 +41,8 @@ class VerifyViewController: UIViewController {
     
     @IBOutlet weak var phoneCheckIcon: UIImageView!
     
+    
+    
     private var isEmailChecked = true
     
     override func viewDidLoad() {
@@ -51,6 +53,9 @@ class VerifyViewController: UIViewController {
     
     
    
+    @IBAction func goToNextScreen(_ sender: UIButton) {
+        performSegue(withIdentifier: "showVerificationPhone", sender: self)
+    }
     
 
     /*

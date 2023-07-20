@@ -35,6 +35,9 @@ class RegisterViewController: UIViewController {
     }
     
 
+    @IBAction func onSignInClicked(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
