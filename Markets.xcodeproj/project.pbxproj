@@ -18,6 +18,8 @@
 		B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67ECFDC2A66AD770052CA79 /* Assets.xcassets */; };
 		B67ECFE02A66AD770052CA79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67ECFDE2A66AD770052CA79 /* LaunchScreen.storyboard */; };
 		B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */; };
+		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
+		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		B67ECFDF2A66AD770052CA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B67ECFE12A66AD770052CA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		B60A64692A693159009EB2F4 /* register */ = {
 			isa = PBXGroup;
 			children = (
+				B60A646C2A697C3E009EB2F4 /* PhoneVerificationViewController.swift */,
 				B60091482A6703C100CCAE26 /* RegisterViewController.swift */,
 				B60A646A2A693176009EB2F4 /* VerifyViewController.swift */,
 			);
@@ -123,11 +128,20 @@
 		B67ECFEA2A66AECC0052CA79 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC015A2A698F5500BD56D9 /* forgotPassword */,
 				B60A64692A693159009EB2F4 /* register */,
 				B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */,
-				B60A646C2A697C3E009EB2F4 /* PhoneVerificationViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */,
+				B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */,
+			);
+			path = forgotPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */,
+				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
 				B60A64682A68476F009EB2F4 /* UIColor.swift in Sources */,
 				B60091492A6703C100CCAE26 /* RegisterViewController.swift in Sources */,
 				B67ECFD82A66AD760052CA79 /* ViewController.swift in Sources */,
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
+				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,
 			);
