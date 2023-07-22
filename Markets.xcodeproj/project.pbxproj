@@ -20,6 +20,11 @@
 		B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
+		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
+		B6FC01632A6C79CE00BD56D9 /* RectanglePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01622A6C79CE00BD56D9 /* RectanglePageControl.swift */; };
+		B6FC01672A6C7CB900BD56D9 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01662A6C7CB900BD56D9 /* Slide.swift */; };
+		B6FC01692A6C7CD400BD56D9 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01682A6C7CD400BD56D9 /* Slide.xib */; };
+		B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC016A2A6C833100BD56D9 /* SlideData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		B6FC01622A6C79CE00BD56D9 /* RectanglePageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglePageControl.swift; sourceTree = "<group>"; };
+		B6FC01662A6C7CB900BD56D9 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		B6FC01682A6C7CD400BD56D9 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		B6FC016A2A6C833100BD56D9 /* SlideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 		B67ECFE72A66AE2E0052CA79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC016A2A6C833100BD56D9 /* SlideData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B67ECFD92A66AD760052CA79 /* Main.storyboard */,
+				B6FC01682A6C7CD400BD56D9 /* Slide.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +131,7 @@
 		B67ECFE92A66AE3B0052CA79 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC015F2A6C771700BD56D9 /* onboarding */,
 				B67ECFEA2A66AECC0052CA79 /* Auth */,
 				B67ECFD72A66AD760052CA79 /* ViewController.swift */,
 			);
@@ -142,6 +155,16 @@
 				B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */,
 			);
 			path = forgotPassword;
+			sourceTree = "<group>";
+		};
+		B6FC015F2A6C771700BD56D9 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */,
+				B6FC01622A6C79CE00BD56D9 /* RectanglePageControl.swift */,
+				B6FC01662A6C7CB900BD56D9 /* Slide.swift */,
+			);
+			path = onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +228,7 @@
 				B67ECFE02A66AD770052CA79 /* LaunchScreen.storyboard in Resources */,
 				B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */,
 				B67ECFDB2A66AD760052CA79 /* Main.storyboard in Resources */,
+				B6FC01692A6C7CD400BD56D9 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +247,12 @@
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
 				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
+				B6FC01672A6C7CB900BD56D9 /* Slide.swift in Sources */,
+				B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */,
+				B6FC01632A6C79CE00BD56D9 /* RectanglePageControl.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,
+				B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
