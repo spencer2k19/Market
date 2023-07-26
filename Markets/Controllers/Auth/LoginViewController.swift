@@ -17,9 +17,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordView: UIView!
     
     
+    @IBAction func login(_ sender: UIButton) {
+        showHome()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
         initViews()
     }
     
@@ -34,15 +37,14 @@ class LoginViewController: UIViewController {
         passwordView.layer.cornerRadius = 5.0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func showHome() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let homeTabVC = storyBoard.instantiateViewController(withIdentifier: "homeTabVC")
+        homeTabVC.modalPresentationStyle = .fullScreen
+        self.present(homeTabVC, animated: true)
     }
-    */
+    
+
+  
 
 }

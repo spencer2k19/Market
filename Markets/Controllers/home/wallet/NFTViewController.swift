@@ -1,17 +1,17 @@
 //
-//  EmailViewController.swift
+//  NFTViewController.swift
 //  Markets
 //
-//  Created by Loic HACHEME on 20/07/2023.
+//  Created by Loic HACHEME on 26/07/2023.
 //
 
 import UIKit
 
-class EmailViewController: UIViewController {
+class NFTViewController: WalletPagerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     

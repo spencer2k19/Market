@@ -78,13 +78,13 @@ class OnBoardingViewController: UIViewController {
             sender.setTitle(label, for: .normal)
          
         } else {
-            performSegue(withIdentifier: "showLoginVC", sender: self)
+            performSegue(withIdentifier: "goToLogin", sender: self)
         }
        
     }
     
     @IBAction func onSkipped(_ sender: UIButton) {
-        performSegue(withIdentifier: "showLoginVC", sender: self)
+        performSegue(withIdentifier: "goToLogin", sender: self)
     }
     
 

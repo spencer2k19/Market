@@ -25,6 +25,24 @@
 		B6FC01672A6C7CB900BD56D9 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01662A6C7CB900BD56D9 /* Slide.swift */; };
 		B6FC01692A6C7CD400BD56D9 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01682A6C7CD400BD56D9 /* Slide.xib */; };
 		B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC016A2A6C833100BD56D9 /* SlideData.swift */; };
+		B6FC016D2A6D502C00BD56D9 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FC016C2A6D502C00BD56D9 /* Wallet.storyboard */; };
+		B6FC016F2A6D504C00BD56D9 /* Dex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FC016E2A6D504C00BD56D9 /* Dex.storyboard */; };
+		B6FC01712A6D506000BD56D9 /* Nft.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01702A6D506000BD56D9 /* Nft.storyboard */; };
+		B6FC01732A6D506E00BD56D9 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01722A6D506E00BD56D9 /* Stats.storyboard */; };
+		B6FC01752A6D507D00BD56D9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01742A6D507D00BD56D9 /* Profile.storyboard */; };
+		B6FC01782A6D53A500BD56D9 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01772A6D53A500BD56D9 /* HomeTabViewController.swift */; };
+		B6FC017B2A6EE88600BD56D9 /* MenuTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC017A2A6EE88600BD56D9 /* MenuTabsView.swift */; };
+		B6FC017D2A6FCFF600BD56D9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC017C2A6FCFF600BD56D9 /* UIView.swift */; };
+		B6FC01822A70881B00BD56D9 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01812A70881B00BD56D9 /* WalletViewController.swift */; };
+		B6FC01842A708A7E00BD56D9 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01832A708A7E00BD56D9 /* AssetsViewController.swift */; };
+		B6FC01862A708C7A00BD56D9 /* WalletPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01852A708C7A00BD56D9 /* WalletPagerViewController.swift */; };
+		B6FC01932A71164E00BD56D9 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01912A71164E00BD56D9 /* TabCell.swift */; };
+		B6FC01942A71164E00BD56D9 /* TabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01922A71164E00BD56D9 /* TabCell.xib */; };
+		B6FC019B2A713C6400BD56D9 /* AssetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC019A2A713C6400BD56D9 /* AssetData.swift */; };
+		B6FC019E2A7140FA00BD56D9 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC019C2A7140FA00BD56D9 /* AssetCell.swift */; };
+		B6FC019F2A7140FA00BD56D9 /* AssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC019D2A7140FA00BD56D9 /* AssetCell.xib */; };
+		B6FC01A22A71753E00BD56D9 /* NFTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01A12A71753E00BD56D9 /* NFTViewController.swift */; };
+		B6FC01A42A71754E00BD56D9 /* DeFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01A32A71754E00BD56D9 /* DeFiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +66,24 @@
 		B6FC01662A6C7CB900BD56D9 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		B6FC01682A6C7CD400BD56D9 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		B6FC016A2A6C833100BD56D9 /* SlideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideData.swift; sourceTree = "<group>"; };
+		B6FC016C2A6D502C00BD56D9 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
+		B6FC016E2A6D504C00BD56D9 /* Dex.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dex.storyboard; sourceTree = "<group>"; };
+		B6FC01702A6D506000BD56D9 /* Nft.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nft.storyboard; sourceTree = "<group>"; };
+		B6FC01722A6D506E00BD56D9 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
+		B6FC01742A6D507D00BD56D9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B6FC01772A6D53A500BD56D9 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		B6FC017A2A6EE88600BD56D9 /* MenuTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsView.swift; sourceTree = "<group>"; };
+		B6FC017C2A6FCFF600BD56D9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B6FC01812A70881B00BD56D9 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		B6FC01832A708A7E00BD56D9 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
+		B6FC01852A708C7A00BD56D9 /* WalletPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPagerViewController.swift; sourceTree = "<group>"; };
+		B6FC01912A71164E00BD56D9 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
+		B6FC01922A71164E00BD56D9 /* TabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabCell.xib; sourceTree = "<group>"; };
+		B6FC019A2A713C6400BD56D9 /* AssetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetData.swift; sourceTree = "<group>"; };
+		B6FC019C2A7140FA00BD56D9 /* AssetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
+		B6FC019D2A7140FA00BD56D9 /* AssetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetCell.xib; sourceTree = "<group>"; };
+		B6FC01A12A71753E00BD56D9 /* NFTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTViewController.swift; sourceTree = "<group>"; };
+		B6FC01A32A71754E00BD56D9 /* DeFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeFiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B60A64672A68476F009EB2F4 /* UIColor.swift */,
+				B6FC017C2A6FCFF600BD56D9 /* UIView.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -98,7 +135,8 @@
 		B67ECFD22A66AD760052CA79 /* Markets */ = {
 			isa = PBXGroup;
 			children = (
-				B60A64662A68475D009EB2F4 /* extensions */,
+				B6FC018F2A71160900BD56D9 /* cells */,
+				B6FC01792A6EE6FB00BD56D9 /* utils */,
 				B67ECFE72A66AE2E0052CA79 /* Models */,
 				B67ECFE82A66AE360052CA79 /* Views */,
 				B67ECFE92A66AE3B0052CA79 /* Controllers */,
@@ -115,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B6FC016A2A6C833100BD56D9 /* SlideData.swift */,
+				B6FC019A2A713C6400BD56D9 /* AssetData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +163,11 @@
 			children = (
 				B67ECFD92A66AD760052CA79 /* Main.storyboard */,
 				B6FC01682A6C7CD400BD56D9 /* Slide.xib */,
+				B6FC016C2A6D502C00BD56D9 /* Wallet.storyboard */,
+				B6FC016E2A6D504C00BD56D9 /* Dex.storyboard */,
+				B6FC01702A6D506000BD56D9 /* Nft.storyboard */,
+				B6FC01722A6D506E00BD56D9 /* Stats.storyboard */,
+				B6FC01742A6D507D00BD56D9 /* Profile.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +175,7 @@
 		B67ECFE92A66AE3B0052CA79 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC01762A6D536A00BD56D9 /* home */,
 				B6FC015F2A6C771700BD56D9 /* onboarding */,
 				B67ECFEA2A66AECC0052CA79 /* Auth */,
 				B67ECFD72A66AD760052CA79 /* ViewController.swift */,
@@ -165,6 +210,63 @@
 				B6FC01662A6C7CB900BD56D9 /* Slide.swift */,
 			);
 			path = onboarding;
+			sourceTree = "<group>";
+		};
+		B6FC01762A6D536A00BD56D9 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01802A7087EA00BD56D9 /* wallet */,
+				B6FC01772A6D53A500BD56D9 /* HomeTabViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		B6FC01792A6EE6FB00BD56D9 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				B60A64662A68475D009EB2F4 /* extensions */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		B6FC01802A7087EA00BD56D9 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC017A2A6EE88600BD56D9 /* MenuTabsView.swift */,
+				B6FC01812A70881B00BD56D9 /* WalletViewController.swift */,
+				B6FC01832A708A7E00BD56D9 /* AssetsViewController.swift */,
+				B6FC01852A708C7A00BD56D9 /* WalletPagerViewController.swift */,
+				B6FC01A12A71753E00BD56D9 /* NFTViewController.swift */,
+				B6FC01A32A71754E00BD56D9 /* DeFiViewController.swift */,
+			);
+			path = wallet;
+			sourceTree = "<group>";
+		};
+		B6FC018F2A71160900BD56D9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01952A71304800BD56D9 /* AssetCell */,
+				B6FC01902A71163C00BD56D9 /* TabCell */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		B6FC01902A71163C00BD56D9 /* TabCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01912A71164E00BD56D9 /* TabCell.swift */,
+				B6FC01922A71164E00BD56D9 /* TabCell.xib */,
+			);
+			path = TabCell;
+			sourceTree = "<group>";
+		};
+		B6FC01952A71304800BD56D9 /* AssetCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC019C2A7140FA00BD56D9 /* AssetCell.swift */,
+				B6FC019D2A7140FA00BD56D9 /* AssetCell.xib */,
+			);
+			path = AssetCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +328,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67ECFE02A66AD770052CA79 /* LaunchScreen.storyboard in Resources */,
+				B6FC016D2A6D502C00BD56D9 /* Wallet.storyboard in Resources */,
+				B6FC016F2A6D504C00BD56D9 /* Dex.storyboard in Resources */,
+				B6FC01712A6D506000BD56D9 /* Nft.storyboard in Resources */,
 				B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */,
+				B6FC01942A71164E00BD56D9 /* TabCell.xib in Resources */,
 				B67ECFDB2A66AD760052CA79 /* Main.storyboard in Resources */,
+				B6FC01752A6D507D00BD56D9 /* Profile.storyboard in Resources */,
+				B6FC01732A6D506E00BD56D9 /* Stats.storyboard in Resources */,
+				B6FC019F2A7140FA00BD56D9 /* AssetCell.xib in Resources */,
 				B6FC01692A6C7CD400BD56D9 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,19 +349,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */,
+				B6FC01A22A71753E00BD56D9 /* NFTViewController.swift in Sources */,
 				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
+				B6FC01862A708C7A00BD56D9 /* WalletPagerViewController.swift in Sources */,
+				B6FC01932A71164E00BD56D9 /* TabCell.swift in Sources */,
+				B6FC019B2A713C6400BD56D9 /* AssetData.swift in Sources */,
 				B60A64682A68476F009EB2F4 /* UIColor.swift in Sources */,
+				B6FC01842A708A7E00BD56D9 /* AssetsViewController.swift in Sources */,
 				B60091492A6703C100CCAE26 /* RegisterViewController.swift in Sources */,
 				B67ECFD82A66AD760052CA79 /* ViewController.swift in Sources */,
+				B6FC01822A70881B00BD56D9 /* WalletViewController.swift in Sources */,
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
+				B6FC017B2A6EE88600BD56D9 /* MenuTabsView.swift in Sources */,
+				B6FC01A42A71754E00BD56D9 /* DeFiViewController.swift in Sources */,
 				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
 				B6FC01672A6C7CB900BD56D9 /* Slide.swift in Sources */,
 				B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */,
 				B6FC01632A6C79CE00BD56D9 /* RectanglePageControl.swift in Sources */,
+				B6FC019E2A7140FA00BD56D9 /* AssetCell.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
+				B6FC017D2A6FCFF600BD56D9 /* UIView.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,
 				B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */,
+				B6FC01782A6D53A500BD56D9 /* HomeTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

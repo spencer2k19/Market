@@ -1,17 +1,18 @@
 //
-//  EmailViewController.swift
+//  HomeTabViewController.swift
 //  Markets
 //
-//  Created by Loic HACHEME on 20/07/2023.
+//  Created by Loic HACHEME on 23/07/2023.
 //
 
 import UIKit
 
-class EmailViewController: UIViewController {
-
+class HomeTabViewController: UITabBarController {
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         // Do any additional setup after loading the view.
     }
     
