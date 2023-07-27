@@ -9,34 +9,31 @@ import UIKit
 
 class OnBoardingViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: RectanglePageControl!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var container: UIView!
     
-   
     
-    var slides:[Slide] = []
+    var tabsPage: [PagerPageViewController] = []
+    var pageController = UIPageViewController()
+    var currentIndex = 0
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        slides = createSlides()
-        setupScrollView()
+       
+        presentPageVCOnView()
+        setupSlides()
         setupPageControl()
         
         // Do any additional setup after loading the view.
+        pageController.delegate = self
+        pageController.dataSource = self
+        
+        pageController.setViewControllers([viewController(At: 0)!], direction: .forward, animated: true)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     private func getSlides() -> [SlideData] {
        return [
@@ -51,36 +48,20 @@ class OnBoardingViewController: UIViewController {
     }
     
     
-    private func createSlides() -> [Slide] {
-       
-        let slides: [Slide] =  getSlides().map { slideData in
-            let slide:Slide = Bundle.main.loadNibNamed("Slide", owner: self)?.first as! Slide
-            slide.imageSlide.image = UIImage(named: slideData.imageName)
-            slide.title.text = slideData.title
-            slide.subtitle.text = slideData.subtitle
-            return slide
-        }
-        
-        return slides
-    }
-    
+   
     
     @IBAction func onButtonClicked(_ sender: UIButton) {
-        let pageWidth = scrollView.frame.width
-        let currentPage = pageControl.currentPage
-       
-        if(currentPage < slides.count - 1) {
-            print("Current page : \(currentPage + 1)")
-            print("Slides count: \(slides.count - 1)")
-            let offset = CGPoint(x: CGFloat(currentPage + 1) * pageWidth, y: 0)
-            scrollView.setContentOffset(offset, animated: true)
-            let label = currentPage + 1 == slides.count - 1 ? "Get Started" : "Next"
-            sender.setTitle(label, for: .normal)
-         
+        if currentIndex < tabsPage.count - 1 {
+            let label = currentIndex + 1 == tabsPage.count - 1 ? "Get Started" : "Next"
+            nextButton.setTitle(label, for: .normal)
+            currentIndex += 1
+            pageControl.currentPage = currentIndex
+            pageController.setViewControllers([viewController(At: currentIndex)!], direction: .forward, animated: true)
+            
         } else {
             performSegue(withIdentifier: "goToLogin", sender: self)
         }
-       
+               
     }
     
     @IBAction func onSkipped(_ sender: UIButton) {
@@ -91,51 +72,129 @@ class OnBoardingViewController: UIViewController {
 }
 
 
+
+
+
+//MARK: - HELPERS
+extension OnBoardingViewController {
+    
+    func presentPageVCOnView() {
+        self.pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        
+        pageController.view.backgroundColor = .clear
+        pageController.view.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: Int(container.frame.width),
+            height: Int(container.frame.height)
+        )
+        
+        container.addSubview(pageController.view)
+    }
+    
+    
+    private func setupSlides() {
+        let slidesData = getSlides()
+        let slide0 = storyboard?.instantiateViewController(withIdentifier: "slideVC") as! SlideViewController
+        slide0.slide = slidesData[0]
+        
+        let slide1 = storyboard?.instantiateViewController(withIdentifier: "slideVC") as! SlideViewController
+        slide1.slide = slidesData[1]
+        
+        let slide2 = storyboard?.instantiateViewController(withIdentifier: "slideVC") as! SlideViewController
+        slide2.slide = slidesData[2]
+        tabsPage.append(contentsOf: [slide0,slide1,slide2])
+        
+    }
+    
+    //present view controller at the given index
+    func viewController(At index: Int) -> UIViewController? {
+        let contentVC = tabsPage[index]
+        contentVC.pageIndex = index
+        contentVC.slide = getSlides()[index]
+        currentIndex = index
+        return contentVC
+    }
+}
+
+
 //MARK: - Setups
 extension OnBoardingViewController {
     
-    private func setupScrollView() {
-        scrollView.delegate = self
-        scrollView.isPagingEnabled = true
-        let scrollViewWidth = scrollView.frame.width
-        let scrollViewHeight = scrollView.frame.height
-        
-        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        scrollView.contentSize = CGSize(width: scrollViewWidth * CGFloat(slides.count), height: scrollViewHeight)
-        
-        
-        for i in 0 ..< slides.count {
-            slides[i].frame = CGRect(x: scrollViewWidth * CGFloat(i), y: 0, width: scrollViewWidth, height: scrollViewHeight)
-            scrollView.addSubview(slides[i])
-            
-        }
-    }
-    
     private func setupPageControl() {
-        pageControl.numberOfPages = slides.count
+        pageControl.numberOfPages = tabsPage.count
         pageControl.currentPage = 0
         pageControl.addTarget(self, action: #selector(pageControlValueChanged), for: .valueChanged)
         
     }
     
     @objc private func pageControlValueChanged() {
-        let pageWidth = scrollView.frame.width
         let currentPage = pageControl.currentPage
-        let offset = CGPoint(x: CGFloat(currentPage) * pageWidth, y: 0)
-        scrollView.setContentOffset(offset, animated: true)
+        
+        if(currentPage > currentIndex) {
+           
+            pageController.setViewControllers([viewController(At: currentPage)!], direction: .forward, animated: true)
+        } else {
+            pageController.setViewControllers([viewController(At: currentPage)!], direction: .reverse, animated: true)
+        }
+        currentIndex  = currentPage
+       
         
     }
 }
 
-//MARK: - SCROLL VIEW DELEGATE
-extension OnBoardingViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageWidth = scrollView.frame.width
-        let currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
-        pageControl.currentPage = currentPage
+
+
+//MARK: - PageController delegate and datasource
+
+extension OnBoardingViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
+        var index = (viewController as! PagerPageViewController).pageIndex
+        
+        if index == 0 || (index == NSNotFound) {
+            return nil
+        }
+        
+        index -= 1
+        return self.viewController(At: index)
     }
+    
+    
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        var index = (viewController as! PagerPageViewController).pageIndex
+        
+        if index == tabsPage.count - 1 || (index == NSNotFound) {
+            return nil
+        }
+        
+        index += 1
+        return self.viewController(At: index)
+    }
+    
+    
+    
+    
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    
+        if finished {
+            if completed {
+                let contentVC = pageViewController.viewControllers!.first as! PagerPageViewController
+                let newIndex = contentVC.pageIndex
+                let label = newIndex == tabsPage.count - 1 ? "Get Started" : "Next"
+                nextButton.setTitle(label, for: .normal)
+                pageControl.currentPage = newIndex
+                
+            }
+        }
+    }
+    
+    
 }
+
+
 
 
 

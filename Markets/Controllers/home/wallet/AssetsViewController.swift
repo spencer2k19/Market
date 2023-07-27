@@ -12,6 +12,9 @@ import UIKit
 class AssetsViewController: WalletPagerViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     var assets: [AssetData] = [
         AssetData(imageAsset: "btc", priceAsset: "35,908 BTC", priceConverted: "$5,348,156,547",
                   priceUser: "$20,556,2", variation: "+4.45%"),
@@ -30,7 +33,8 @@ class AssetsViewController: WalletPagerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "AssetCell", bundle: nil), forCellReuseIdentifier: AssetCell.identifier)
-       
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.rowHeight = 80
         tableView.dataSource = self
         tableView.delegate = self
         tableView.contentInset.bottom = 40

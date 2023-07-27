@@ -20,6 +20,15 @@ class WalletViewController: UIViewController {
     var pageController = UIPageViewController()
     
     
+    @IBAction func manageClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToWalletManage", sender: self)
+    }
+    
+    
+    @IBAction func connectWalletClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToWalletManage", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
