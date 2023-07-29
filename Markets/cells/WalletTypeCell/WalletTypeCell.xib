@@ -65,6 +65,7 @@
                                                         <color key="tintColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.96470588235294119" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Import">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                             <color key="baseForegroundColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                             <color key="baseBackgroundColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.96470588235294119" alpha="0.69803921568627447" colorSpace="calibratedRGB"/>
                                                         </buttonConfiguration>
@@ -75,10 +76,11 @@
                                                 </constraints>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GKn-qo-bYX">
-                                                <rect key="frame" x="285" y="9.9999999999999982" width="24" height="20.333333333333329"/>
+                                                <rect key="frame" x="293" y="13.999999999999998" width="16" height="12.33333333333333"/>
+                                                <color key="tintColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="L6H-6L-XGc"/>
-                                                    <constraint firstAttribute="height" constant="24" id="wqN-6G-od8"/>
+                                                    <constraint firstAttribute="width" constant="16" id="L6H-6L-XGc"/>
+                                                    <constraint firstAttribute="height" constant="16" id="wqN-6G-od8"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>

@@ -49,6 +49,11 @@
 		B6FC01AE2A72BA2500BD56D9 /* WalletTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01AC2A72BA2500BD56D9 /* WalletTypeCell.swift */; };
 		B6FC01AF2A72BA2500BD56D9 /* WalletTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01AD2A72BA2500BD56D9 /* WalletTypeCell.xib */; };
 		B6FC01B12A72D08900BD56D9 /* WalletTypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01B02A72D08900BD56D9 /* WalletTypeData.swift */; };
+		B6FC01B32A73B25D00BD56D9 /* AddWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01B22A73B25D00BD56D9 /* AddWalletViewController.swift */; };
+		B6FC01B52A73C92600BD56D9 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01B42A73C92600BD56D9 /* NSMutableAttributedString.swift */; };
+		B6FC01B72A75293000BD56D9 /* UITapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01B62A75293000BD56D9 /* UITapGestureRecognizer.swift */; };
+		B6FC01B92A75351400BD56D9 /* TermServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01B82A75351400BD56D9 /* TermServiceViewController.swift */; };
+		B6FC01BB2A7545E600BD56D9 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01BA2A7545E600BD56D9 /* PrivacyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +101,11 @@
 		B6FC01AC2A72BA2500BD56D9 /* WalletTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTypeCell.swift; sourceTree = "<group>"; };
 		B6FC01AD2A72BA2500BD56D9 /* WalletTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletTypeCell.xib; sourceTree = "<group>"; };
 		B6FC01B02A72D08900BD56D9 /* WalletTypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTypeData.swift; sourceTree = "<group>"; };
+		B6FC01B22A73B25D00BD56D9 /* AddWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalletViewController.swift; sourceTree = "<group>"; };
+		B6FC01B42A73C92600BD56D9 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		B6FC01B62A75293000BD56D9 /* UITapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizer.swift; sourceTree = "<group>"; };
+		B6FC01B82A75351400BD56D9 /* TermServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermServiceViewController.swift; sourceTree = "<group>"; };
+		B6FC01BA2A7545E600BD56D9 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,8 @@
 			children = (
 				B60A64672A68476F009EB2F4 /* UIColor.swift */,
 				B6FC017C2A6FCFF600BD56D9 /* UIView.swift */,
+				B6FC01B42A73C92600BD56D9 /* NSMutableAttributedString.swift */,
+				B6FC01B62A75293000BD56D9 /* UITapGestureRecognizer.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -254,6 +266,9 @@
 				B6FC01A12A71753E00BD56D9 /* NFTViewController.swift */,
 				B6FC01A32A71754E00BD56D9 /* DeFiViewController.swift */,
 				B6FC01A92A72B65D00BD56D9 /* WalletManageViewController.swift */,
+				B6FC01B22A73B25D00BD56D9 /* AddWalletViewController.swift */,
+				B6FC01B82A75351400BD56D9 /* TermServiceViewController.swift */,
+				B6FC01BA2A7545E600BD56D9 /* PrivacyViewController.swift */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -375,8 +390,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FC01B72A75293000BD56D9 /* UITapGestureRecognizer.swift in Sources */,
 				B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */,
 				B6FC01A22A71753E00BD56D9 /* NFTViewController.swift in Sources */,
+				B6FC01B32A73B25D00BD56D9 /* AddWalletViewController.swift in Sources */,
 				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
 				B6FC01862A708C7A00BD56D9 /* WalletPagerViewController.swift in Sources */,
 				B6FC01932A71164E00BD56D9 /* TabCell.swift in Sources */,
@@ -390,10 +407,12 @@
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
 				B6FC017B2A6EE88600BD56D9 /* MenuTabsView.swift in Sources */,
+				B6FC01BB2A7545E600BD56D9 /* PrivacyViewController.swift in Sources */,
 				B6FC01A42A71754E00BD56D9 /* DeFiViewController.swift in Sources */,
 				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
 				B6FC01672A6C7CB900BD56D9 /* Slide.swift in Sources */,
 				B6FC01AE2A72BA2500BD56D9 /* WalletTypeCell.swift in Sources */,
+				B6FC01B52A73C92600BD56D9 /* NSMutableAttributedString.swift in Sources */,
 				B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */,
 				B6FC01632A6C79CE00BD56D9 /* RectanglePageControl.swift in Sources */,
 				B6FC01AA2A72B65D00BD56D9 /* WalletManageViewController.swift in Sources */,
@@ -404,6 +423,7 @@
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,
 				B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */,
 				B6FC01B12A72D08900BD56D9 /* WalletTypeData.swift in Sources */,
+				B6FC01B92A75351400BD56D9 /* TermServiceViewController.swift in Sources */,
 				B6FC01782A6D53A500BD56D9 /* HomeTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
