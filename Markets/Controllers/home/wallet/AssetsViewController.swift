@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class AssetsViewController: WalletPagerViewController {
+class AssetsViewController: PagerViewController {
 
     @IBOutlet weak var tableView: UITableView!
     

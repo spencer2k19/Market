@@ -14,6 +14,7 @@ class TabCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var indicatorView: UIView!
     
+    
     override var isSelected: Bool {
         didSet {
             UIView.animate(withDuration: 0.30) {
@@ -22,6 +23,9 @@ class TabCell: UICollectionViewCell {
                 self.titleLabel.font = self.isSelected ? .systemFont(ofSize: 14, weight: .medium) : .systemFont(ofSize: 14, weight: .regular)
             
                 self.indicatorView.backgroundColor = self.isSelected ? UIColor(hex: "#2563EB") : UIColor.clear
+                
+                
+                
             }
 
         }

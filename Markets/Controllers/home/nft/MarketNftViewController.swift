@@ -1,13 +1,13 @@
 //
-//  DeFiViewController.swift
+//  MarketNftViewController.swift
 //  Markets
 //
-//  Created by Loic HACHEME on 26/07/2023.
+//  Created by Loic HACHEME on 31/07/2023.
 //
 
 import UIKit
 
-class DeFiViewController: PagerViewController {
+class MarketNftViewController: PagerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

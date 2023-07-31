@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NFTViewController: WalletPagerViewController {
+class NFTViewController: PagerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

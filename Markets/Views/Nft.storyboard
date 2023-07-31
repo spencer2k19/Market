@@ -8,34 +8,134 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Nft Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="NftHomeViewController" customModule="Markets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14M-OR-84a" userLabel="header">
+                                <rect key="frame" x="15" y="59" width="363" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H49-Pv-y8w" userLabel="menuTabView" customClass="MenuTabsView" customModule="Markets" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrt-om-Nvf">
+                                        <rect key="frame" x="323" y="0.0" width="40" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XEv-WA-cTd">
+                                                <rect key="frame" x="8" y="10.999999999999996" width="24" height="22.333333333333332"/>
+                                                <color key="tintColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="DAF-9g-3Ud"/>
+                                                    <constraint firstAttribute="height" constant="24" id="pva-Ra-JYu"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="XEv-WA-cTd" firstAttribute="top" secondItem="lrt-om-Nvf" secondAttribute="top" constant="10" id="Cff-C7-L7J"/>
+                                            <constraint firstAttribute="width" constant="40" id="EY8-XW-GQ9"/>
+                                            <constraint firstItem="XEv-WA-cTd" firstAttribute="centerX" secondItem="lrt-om-Nvf" secondAttribute="centerX" id="R1k-gy-pdO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qxY-up-Vta"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-nU-FNc" userLabel="Container">
+                                <rect key="frame" x="0.0" y="154" width="393" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="14M-OR-84a" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="15" id="6IB-1y-EBF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Gcq-nU-FNc" secondAttribute="bottom" id="Bei-hW-3wA"/>
+                            <constraint firstItem="14M-OR-84a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="EzQ-0d-fO0"/>
+                            <constraint firstAttribute="trailing" secondItem="14M-OR-84a" secondAttribute="trailing" constant="15" id="F51-hp-o5V"/>
+                            <constraint firstItem="Gcq-nU-FNc" firstAttribute="top" secondItem="14M-OR-84a" secondAttribute="bottom" constant="15" id="K2X-Kf-pa3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gcq-nU-FNc" secondAttribute="trailing" id="qs4-0U-wqZ"/>
+                            <constraint firstItem="Gcq-nU-FNc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vYX-px-NPa"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BsB-NP-LRC"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="BsB-NP-LRC">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="container" destination="Gcq-nU-FNc" id="b6A-5k-W7k"/>
+                        <outlet property="menuTabView" destination="H49-Pv-y8w" id="QXQ-fX-XyX"/>
+                        <outlet property="searchImage" destination="XEv-WA-cTd" id="IaI-m8-Drs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996.18320610687022" y="-2.1126760563380285"/>
         </scene>
+        <!--Popular Nft View Controller-->
+        <scene sceneID="JdB-KW-Mg3">
+            <objects>
+                <viewController storyboardIdentifier="popularVC" id="n8D-TA-qGq" customClass="PopularNftViewController" customModule="Markets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zHh-Kp-goF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KPX-ss-GR5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wF1-z2-oZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="-689"/>
+        </scene>
+        <!--Market Nft View Controller-->
+        <scene sceneID="vze-sJ-elK">
+            <objects>
+                <viewController storyboardIdentifier="marketVC" id="5Tw-kM-z7t" customClass="MarketNftViewController" customModule="Markets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O8E-IB-xmF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YbI-lz-aIr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5am-mF-p1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269" y="-701"/>
+        </scene>
+        <!--Primary Nft View Controller-->
+        <scene sceneID="B9X-cL-Ly9">
+            <objects>
+                <viewController storyboardIdentifier="primaryVC" id="3Vc-ZG-nay" customClass="PrimaryNftViewController" customModule="Markets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yQB-3w-3am">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J4J-hZ-fOM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqX-w7-4xK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2120" y="-697"/>
+        </scene>
         <!--NFT-->
         <scene sceneID="lAf-mF-3Cm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jEq-K2-Jf0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jEq-K2-Jf0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="NFT" image="square.and.arrow.up.circle" catalog="system" id="hq5-5w-y8p"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfp-Oa-cLA">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lRJ-lo-GiD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="kKz-Q6-YAg"/>
                     </connections>
@@ -46,6 +146,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="square.and.arrow.up.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

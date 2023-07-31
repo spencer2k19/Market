@@ -27,6 +27,14 @@ class MenuTabsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         return cv
     }()
     
+    
+    
+    var shouldShowIndicator: Bool = true {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     var isSizeToFitCellsNeeded: Bool = false {
         didSet {
             self.collectionView.reloadData()
@@ -76,6 +84,7 @@ class MenuTabsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCell.identifier, for: indexPath) as? TabCell {
             cell.titleLabel.text = dataArray[indexPath.item]
+            cell.indicatorView.isHidden = !shouldShowIndicator
             return cell
         }
         return UICollectionViewCell()

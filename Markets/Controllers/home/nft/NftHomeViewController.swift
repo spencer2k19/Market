@@ -1,64 +1,56 @@
 //
-//  WalletViewController.swift
+//  NFTViewController.swift
 //  Markets
 //
-//  Created by Loic HACHEME on 25/07/2023.
+//  Created by Loic HACHEME on 31/07/2023.
 //
 
 import UIKit
 
-class WalletViewController: UIViewController {
-        
-    
-    
-    @IBOutlet weak var menuTabsView: MenuTabsView!
+class NftHomeViewController: UIViewController {
+   
+    @IBOutlet weak var menuTabView: MenuTabsView!
+    @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var container: UIView!
     
     var currentIndex: Int = 0
-    var tabs = ["Coins","NFT","DeFi"]
+    var tabs = ["Popular","Market","Primary/IGO"]
     var tabsPage: [PagerViewController] = []
     var pageController = UIPageViewController()
     
     
-    @IBAction func manageClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToWalletManage", sender: self)
-    }
-    
-    
-    @IBAction func connectWalletClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToWalletManage", sender: self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        menuTabsView.dataArray = tabs
-        menuTabsView.isSizeToFitCellsNeeded = false
-        menuTabsView.collectionView.backgroundColor = UIColor.white
+        
+        menuTabView.dataArray = tabs
+        menuTabView.isSizeToFitCellsNeeded = false
+        menuTabView.collectionView.backgroundColor = UIColor.white
+        menuTabView.shouldShowIndicator = false
         
         presentPageVCOnView()
-        setupSlides()
+        setupPageContents()
+        menuTabView.menuDelegate = self
         
-        menuTabsView.menuDelegate = self
         pageController.delegate = self
         pageController.dataSource = self
         
-       
-        
         //For initial display
-        menuTabsView.collectionView.selectItem(at: IndexPath.init(item: 0, section: 0), animated: true, scrollPosition: .centeredVertically)
+        
+        menuTabView.collectionView.selectItem(at: IndexPath.init(item: 0, section: 0), animated: true, scrollPosition: .centeredVertically)
         
         pageController.setViewControllers([viewController(At: 0)!], direction: .forward, animated: true)
         
         
+
     }
     
 
 }
 
+
+
 //MARK: - HELPERS
-extension WalletViewController {
-    
+extension NftHomeViewController {
     func presentPageVCOnView() {
         self.pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
@@ -74,22 +66,21 @@ extension WalletViewController {
     }
     
     
-    private func setupSlides() {
-        let slide0 = storyboard?.instantiateViewController(withIdentifier: "contentVC") as! AssetsViewController
-//        slide0.pageIndex = 0
+    func setupPageContents() {
+        let page0 = storyboard?.instantiateViewController(withIdentifier: "popularVC") as! PopularNftViewController
         
-        let slide1 = storyboard?.instantiateViewController(withIdentifier: "NftVC") as! NFTViewController
-//        slide1.pageIndex = 1
         
-        let slide2 = storyboard?.instantiateViewController(withIdentifier: "DefiVC") as! DeFiViewController
-//        slide2.pageIndex = 2
-        tabsPage.append(contentsOf: [slide0,slide1,slide2])
+        let page1 = storyboard?.instantiateViewController(withIdentifier: "marketVC") as! MarketNftViewController
         
+        let page2 = storyboard?.instantiateViewController(withIdentifier: "primaryVC") as! PrimaryNftViewController
+        
+        tabsPage.append(contentsOf: [page0,page1,page2])
     }
+    
     
     //present view controller at the given index
     func viewController(At index: Int) -> UIViewController? {
-        if((self.menuTabsView.dataArray.count == 0) || (index >= menuTabsView.dataArray.count)) {
+        if((self.menuTabView.dataArray.count == 0) || (index >= menuTabView.dataArray.count)) {
             return nil
         }
         
@@ -101,8 +92,10 @@ extension WalletViewController {
 }
 
 
+
+
 //MARK: - Menubar delegate
-extension WalletViewController: MenuBarDelegate {
+extension NftHomeViewController: MenuBarDelegate {
     func menubarDidSelectItemAt(menu: MenuTabsView, index: Int) {
         
         //if selected index is other than selected one, by comparing with current index, page controller goes either forward or backward.
@@ -114,16 +107,18 @@ extension WalletViewController: MenuBarDelegate {
                 pageController.setViewControllers([viewController(At: index)!], direction: .reverse, animated: true)
             }
             
-            menuTabsView.collectionView.scrollToItem(at: IndexPath.init(item: index, section: 0), at: .centeredHorizontally, animated: true)
+            menuTabView.collectionView.scrollToItem(at: IndexPath.init(item: index, section: 0), at: .centeredHorizontally, animated: true)
         }
     }
     
     
 }
 
+
+
 //MARK: - PageController delegate and datasource
 
-extension WalletViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+extension NftHomeViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         var index = (viewController as! PagerViewController).pageIndex
@@ -154,9 +149,9 @@ extension WalletViewController: UIPageViewControllerDataSource, UIPageViewContro
             if completed {
                 let contentVC = pageViewController.viewControllers!.first as! PagerViewController
                 let newIndex = contentVC.pageIndex
-                menuTabsView.collectionView.selectItem(at: IndexPath.init(item: newIndex, section: 0), animated: true, scrollPosition: .centeredVertically)
+                menuTabView.collectionView.selectItem(at: IndexPath.init(item: newIndex, section: 0), animated: true, scrollPosition: .centeredVertically)
                 
-                menuTabsView.collectionView.scrollToItem(at: IndexPath.init(item: newIndex, section: 0), at: .centeredHorizontally, animated: true)
+                menuTabView.collectionView.scrollToItem(at: IndexPath.init(item: newIndex, section: 0), at: .centeredHorizontally, animated: true)
                 
                 
             }
@@ -165,4 +160,5 @@ extension WalletViewController: UIPageViewControllerDataSource, UIPageViewContro
     
     
 }
+
 

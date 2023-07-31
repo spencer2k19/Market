@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WalletPagerViewController: UIViewController {
+class PagerViewController: UIViewController {
     var pageIndex: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
