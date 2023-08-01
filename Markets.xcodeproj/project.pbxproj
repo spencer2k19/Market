@@ -58,6 +58,13 @@
 		B6FC01C12A77BDD000BD56D9 /* PopularNftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01C02A77BDD000BD56D9 /* PopularNftViewController.swift */; };
 		B6FC01C32A77BDE100BD56D9 /* MarketNftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01C22A77BDE100BD56D9 /* MarketNftViewController.swift */; };
 		B6FC01C52A77BDF700BD56D9 /* PrimaryNftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01C42A77BDF700BD56D9 /* PrimaryNftViewController.swift */; };
+		B6FC01C92A77E9FD00BD56D9 /* TitleTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01C72A77E9FD00BD56D9 /* TitleTabCell.swift */; };
+		B6FC01CA2A77E9FD00BD56D9 /* TitleTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01C82A77E9FD00BD56D9 /* TitleTabCell.xib */; };
+		B6FC01CC2A77EBEF00BD56D9 /* MenuTitleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01CB2A77EBEF00BD56D9 /* MenuTitleTabView.swift */; };
+		B6FC01D12A78099B00BD56D9 /* NftGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01CF2A78099B00BD56D9 /* NftGridCell.swift */; };
+		B6FC01D22A78099B00BD56D9 /* NftGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01D02A78099B00BD56D9 /* NftGridCell.xib */; };
+		B6FC01D42A780A6700BD56D9 /* NftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01D32A780A6700BD56D9 /* NftData.swift */; };
+		B6FC01D72A79CAB000BD56D9 /* DisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01D62A79CAB000BD56D9 /* DisplayType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +121,13 @@
 		B6FC01C02A77BDD000BD56D9 /* PopularNftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularNftViewController.swift; sourceTree = "<group>"; };
 		B6FC01C22A77BDE100BD56D9 /* MarketNftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketNftViewController.swift; sourceTree = "<group>"; };
 		B6FC01C42A77BDF700BD56D9 /* PrimaryNftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryNftViewController.swift; sourceTree = "<group>"; };
+		B6FC01C72A77E9FD00BD56D9 /* TitleTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTabCell.swift; sourceTree = "<group>"; };
+		B6FC01C82A77E9FD00BD56D9 /* TitleTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTabCell.xib; sourceTree = "<group>"; };
+		B6FC01CB2A77EBEF00BD56D9 /* MenuTitleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTitleTabView.swift; sourceTree = "<group>"; };
+		B6FC01CF2A78099B00BD56D9 /* NftGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftGridCell.swift; sourceTree = "<group>"; };
+		B6FC01D02A78099B00BD56D9 /* NftGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NftGridCell.xib; sourceTree = "<group>"; };
+		B6FC01D32A780A6700BD56D9 /* NftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftData.swift; sourceTree = "<group>"; };
+		B6FC01D62A79CAB000BD56D9 /* DisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +201,7 @@
 				B6FC016A2A6C833100BD56D9 /* SlideData.swift */,
 				B6FC019A2A713C6400BD56D9 /* AssetData.swift */,
 				B6FC01B02A72D08900BD56D9 /* WalletTypeData.swift */,
+				B6FC01D32A780A6700BD56D9 /* NftData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,6 +276,8 @@
 		B6FC01792A6EE6FB00BD56D9 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC01D52A79CA9B00BD56D9 /* enums */,
+				B6FC01CD2A77EF5200BD56D9 /* customViews */,
 				B60A64662A68475D009EB2F4 /* extensions */,
 			);
 			path = utils;
@@ -285,6 +302,8 @@
 		B6FC018F2A71160900BD56D9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC01CE2A78097900BD56D9 /* NftGridCell */,
+				B6FC01C62A77E9C700BD56D9 /* TitleTabCell */,
 				B6FC01AB2A72B9BC00BD56D9 /* WalletTypeCell */,
 				B6FC01952A71304800BD56D9 /* AssetCell */,
 				B6FC01902A71163C00BD56D9 /* TabCell */,
@@ -336,6 +355,40 @@
 				B6FC01852A708C7A00BD56D9 /* PagerViewController.swift */,
 			);
 			path = pager;
+			sourceTree = "<group>";
+		};
+		B6FC01C62A77E9C700BD56D9 /* TitleTabCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01C72A77E9FD00BD56D9 /* TitleTabCell.swift */,
+				B6FC01C82A77E9FD00BD56D9 /* TitleTabCell.xib */,
+			);
+			path = TitleTabCell;
+			sourceTree = "<group>";
+		};
+		B6FC01CD2A77EF5200BD56D9 /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01CB2A77EBEF00BD56D9 /* MenuTitleTabView.swift */,
+			);
+			path = customViews;
+			sourceTree = "<group>";
+		};
+		B6FC01CE2A78097900BD56D9 /* NftGridCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01CF2A78099B00BD56D9 /* NftGridCell.swift */,
+				B6FC01D02A78099B00BD56D9 /* NftGridCell.xib */,
+			);
+			path = NftGridCell;
+			sourceTree = "<group>";
+		};
+		B6FC01D52A79CA9B00BD56D9 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01D62A79CAB000BD56D9 /* DisplayType.swift */,
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +454,8 @@
 				B6FC016F2A6D504C00BD56D9 /* Dex.storyboard in Resources */,
 				B6FC01712A6D506000BD56D9 /* Nft.storyboard in Resources */,
 				B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */,
+				B6FC01CA2A77E9FD00BD56D9 /* TitleTabCell.xib in Resources */,
+				B6FC01D22A78099B00BD56D9 /* NftGridCell.xib in Resources */,
 				B6FC01942A71164E00BD56D9 /* TabCell.xib in Resources */,
 				B67ECFDB2A66AD760052CA79 /* Main.storyboard in Resources */,
 				B6FC01752A6D507D00BD56D9 /* Profile.storyboard in Resources */,
@@ -422,8 +477,11 @@
 				B6FC01BE2A77B81D00BD56D9 /* NftHomeViewController.swift in Sources */,
 				B6FC01C12A77BDD000BD56D9 /* PopularNftViewController.swift in Sources */,
 				B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */,
+				B6FC01CC2A77EBEF00BD56D9 /* MenuTitleTabView.swift in Sources */,
 				B6FC01A22A71753E00BD56D9 /* NFTViewController.swift in Sources */,
 				B6FC01B32A73B25D00BD56D9 /* AddWalletViewController.swift in Sources */,
+				B6FC01C92A77E9FD00BD56D9 /* TitleTabCell.swift in Sources */,
+				B6FC01D72A79CAB000BD56D9 /* DisplayType.swift in Sources */,
 				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
 				B6FC01862A708C7A00BD56D9 /* PagerViewController.swift in Sources */,
 				B6FC01C52A77BDF700BD56D9 /* PrimaryNftViewController.swift in Sources */,
@@ -438,6 +496,7 @@
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
 				B6FC017B2A6EE88600BD56D9 /* MenuTabsView.swift in Sources */,
+				B6FC01D12A78099B00BD56D9 /* NftGridCell.swift in Sources */,
 				B6FC01C32A77BDE100BD56D9 /* MarketNftViewController.swift in Sources */,
 				B6FC01BB2A7545E600BD56D9 /* PrivacyViewController.swift in Sources */,
 				B6FC01A42A71754E00BD56D9 /* DeFiViewController.swift in Sources */,
@@ -450,6 +509,7 @@
 				B6FC01AA2A72B65D00BD56D9 /* WalletManageViewController.swift in Sources */,
 				B6FC01A62A72843A00BD56D9 /* PagerPageViewController.swift in Sources */,
 				B6FC019E2A7140FA00BD56D9 /* AssetCell.swift in Sources */,
+				B6FC01D42A780A6700BD56D9 /* NftData.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
 				B6FC017D2A6FCFF600BD56D9 /* UIView.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,

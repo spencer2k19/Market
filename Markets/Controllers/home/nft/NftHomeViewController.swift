@@ -9,12 +9,11 @@ import UIKit
 
 class NftHomeViewController: UIViewController {
    
-    @IBOutlet weak var menuTabView: MenuTabsView!
     @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var container: UIView!
-    
+    @IBOutlet weak var menuTabView: MenuTitleTabView!
     var currentIndex: Int = 0
-    var tabs = ["Popular","Market","Primary/IGO"]
+    var tabs = ["Popular","Market","Primary"]
     var tabsPage: [PagerViewController] = []
     var pageController = UIPageViewController()
     
@@ -25,7 +24,6 @@ class NftHomeViewController: UIViewController {
         menuTabView.dataArray = tabs
         menuTabView.isSizeToFitCellsNeeded = false
         menuTabView.collectionView.backgroundColor = UIColor.white
-        menuTabView.shouldShowIndicator = false
         
         presentPageVCOnView()
         setupPageContents()
@@ -95,8 +93,8 @@ extension NftHomeViewController {
 
 
 //MARK: - Menubar delegate
-extension NftHomeViewController: MenuBarDelegate {
-    func menubarDidSelectItemAt(menu: MenuTabsView, index: Int) {
+extension NftHomeViewController: MenuTitleBarDelegate {
+    func menubarDidSelectItemAt(menu: MenuTitleTabView, index: Int) {
         
         //if selected index is other than selected one, by comparing with current index, page controller goes either forward or backward.
         
