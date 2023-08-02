@@ -65,6 +65,8 @@
 		B6FC01D22A78099B00BD56D9 /* NftGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01D02A78099B00BD56D9 /* NftGridCell.xib */; };
 		B6FC01D42A780A6700BD56D9 /* NftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01D32A780A6700BD56D9 /* NftData.swift */; };
 		B6FC01D72A79CAB000BD56D9 /* DisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01D62A79CAB000BD56D9 /* DisplayType.swift */; };
+		B6FC01DB2A7A871200BD56D9 /* NftListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01D92A7A871200BD56D9 /* NftListCell.swift */; };
+		B6FC01DC2A7A871200BD56D9 /* NftListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01DA2A7A871200BD56D9 /* NftListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +130,8 @@
 		B6FC01D02A78099B00BD56D9 /* NftGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NftGridCell.xib; sourceTree = "<group>"; };
 		B6FC01D32A780A6700BD56D9 /* NftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftData.swift; sourceTree = "<group>"; };
 		B6FC01D62A79CAB000BD56D9 /* DisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayType.swift; sourceTree = "<group>"; };
+		B6FC01D92A7A871200BD56D9 /* NftListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftListCell.swift; sourceTree = "<group>"; };
+		B6FC01DA2A7A871200BD56D9 /* NftListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NftListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +306,7 @@
 		B6FC018F2A71160900BD56D9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				B6FC01D82A7A86F900BD56D9 /* NftListCell */,
 				B6FC01CE2A78097900BD56D9 /* NftGridCell */,
 				B6FC01C62A77E9C700BD56D9 /* TitleTabCell */,
 				B6FC01AB2A72B9BC00BD56D9 /* WalletTypeCell */,
@@ -391,6 +396,15 @@
 			path = enums;
 			sourceTree = "<group>";
 		};
+		B6FC01D82A7A86F900BD56D9 /* NftListCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01D92A7A871200BD56D9 /* NftListCell.swift */,
+				B6FC01DA2A7A871200BD56D9 /* NftListCell.xib */,
+			);
+			path = NftListCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,6 +476,7 @@
 				B6FC01732A6D506E00BD56D9 /* Stats.storyboard in Resources */,
 				B6FC019F2A7140FA00BD56D9 /* AssetCell.xib in Resources */,
 				B6FC01AF2A72BA2500BD56D9 /* WalletTypeCell.xib in Resources */,
+				B6FC01DC2A7A871200BD56D9 /* NftListCell.xib in Resources */,
 				B6FC01692A6C7CD400BD56D9 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FC01DB2A7A871200BD56D9 /* NftListCell.swift in Sources */,
 				B6FC01B72A75293000BD56D9 /* UITapGestureRecognizer.swift in Sources */,
 				B6FC01BE2A77B81D00BD56D9 /* NftHomeViewController.swift in Sources */,
 				B6FC01C12A77BDD000BD56D9 /* PopularNftViewController.swift in Sources */,

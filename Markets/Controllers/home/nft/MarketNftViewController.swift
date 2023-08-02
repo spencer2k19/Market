@@ -33,8 +33,10 @@ class MarketNftViewController: PagerViewController {
     @objc func toggleContentLayout(_ sender: UITapGestureRecognizer) {
         print("Toggle content is clicked")
         currentLayout =  currentLayout == .pellicule ? .list : .pellicule
+        formatImage.image = currentLayout == .pellicule ? UIImage(systemName: "square.grid.2x2") : UIImage(systemName: "rectangle.grid.1x2")
+       
+        collectionView.reloadSections(IndexSet(integer: 0))
         collectionView.collectionViewLayout = createCollectionLayout()
-        collectionView.collectionViewLayout.invalidateLayout()
         
     }
     
@@ -48,6 +50,7 @@ extension MarketNftViewController {
         collectionView.layer.backgroundColor = UIColor.clear.cgColor
 
         collectionView.register(UINib(nibName: "NftGridCell", bundle: nil), forCellWithReuseIdentifier: NftGridCell.identifier)
+        collectionView.register(UINib(nibName: "NftListCell", bundle: nil), forCellWithReuseIdentifier: NftListCell.identifier)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -71,13 +74,20 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NftGridCell.identifier, for: indexPath) as? NftGridCell {
-            cell.nftData = self.data[indexPath.row]
-            return cell
+        if(currentLayout == .pellicule) {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NftGridCell.identifier, for: indexPath) as? NftGridCell {
+                cell.nftData = self.data[indexPath.row]
+                return cell
+            }
+        } else {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NftListCell.identifier, for: indexPath) as? NftListCell {
+                cell.nftData = self.data[indexPath.row]
+                return cell
+            }
         }
+      
         
-        return NftGridCell()
+        return UICollectionViewCell()
     }
     
     
@@ -87,7 +97,7 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     func createCollectionLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 10
+        layout.minimumLineSpacing = 15
         layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         if(currentLayout == .pellicule) {
             let spacing: CGFloat = 10 // Espace horizontal entre les cellules
@@ -98,7 +108,7 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
         } else {
             let padding: CGFloat = 10 // Padding autour de la grille
             let availableWidth = collectionView.bounds.width - (padding * 2)
-            layout.itemSize = CGSize(width: availableWidth, height: 350)
+            layout.itemSize = CGSize(width: availableWidth, height: 380)
         }
         
        
