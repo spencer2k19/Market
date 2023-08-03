@@ -26,8 +26,9 @@ class NftCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imageView.clipsToBounds = true
+      
         imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.clipsToBounds = true
         
         badgeContainer.clipsToBounds = true
         badgeContainer.layer.cornerRadius = badgeContainer.frame.width / 2
