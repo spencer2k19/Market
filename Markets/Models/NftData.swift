@@ -14,4 +14,6 @@ struct NftData {
     let price: String
     let favoriteNumber: String
     let asset: String
+    let variation: String
+    let user: String
 }
