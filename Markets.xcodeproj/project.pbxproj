@@ -73,6 +73,7 @@
 		B6FC01E62A7ABF4100BD56D9 /* NftCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01E42A7ABF4100BD56D9 /* NftCollectionCell.xib */; };
 		B6FC01EA2A7B127800BD56D9 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01E82A7B127800BD56D9 /* CollectionHeaderView.swift */; };
 		B6FC01EB2A7B127800BD56D9 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6FC01E92A7B127800BD56D9 /* CollectionHeaderView.xib */; };
+		B6FC01ED2A7D0A1500BD56D9 /* DetailsAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01EC2A7D0A1500BD56D9 /* DetailsAssetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		B6FC01E42A7ABF4100BD56D9 /* NftCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NftCollectionCell.xib; sourceTree = "<group>"; };
 		B6FC01E82A7B127800BD56D9 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		B6FC01E92A7B127800BD56D9 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		B6FC01EC2A7D0A1500BD56D9 /* DetailsAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +367,7 @@
 				B6FC01C02A77BDD000BD56D9 /* PopularNftViewController.swift */,
 				B6FC01C22A77BDE100BD56D9 /* MarketNftViewController.swift */,
 				B6FC01C42A77BDF700BD56D9 /* PrimaryNftViewController.swift */,
+				B6FC01EC2A7D0A1500BD56D9 /* DetailsAssetViewController.swift */,
 			);
 			path = nft;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				B6FC01A62A72843A00BD56D9 /* PagerPageViewController.swift in Sources */,
 				B6FC019E2A7140FA00BD56D9 /* AssetCell.swift in Sources */,
 				B6FC01D42A780A6700BD56D9 /* NftData.swift in Sources */,
+				B6FC01ED2A7D0A1500BD56D9 /* DetailsAssetViewController.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
 				B6FC017D2A6FCFF600BD56D9 /* UIView.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,

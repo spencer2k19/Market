@@ -35,7 +35,7 @@ class MarketNftViewController: PagerViewController {
         formatImage.image = currentLayout == .pellicule ? UIImage(systemName: "square.grid.2x2") : UIImage(systemName: "rectangle.grid.1x2")
        
         collectionView.reloadSections(IndexSet(integer: 0))
-        collectionView.collectionViewLayout = createCollectionLayout()
+        collectionView.collectionViewLayout = createMainCollectionLayout()
         
     }
     
@@ -53,7 +53,7 @@ extension MarketNftViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.collectionViewLayout = self.createCollectionLayout()
+        collectionView.collectionViewLayout = self.createMainCollectionLayout()
         
        
     }
@@ -70,6 +70,15 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nftStoryBoard = UIStoryboard.init(name: "Nft", bundle: nil)
+        let detailsVC = nftStoryBoard.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
+        detailsVC.modalPresentationStyle = .overFullScreen
+        self.present(detailsVC, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,53 +102,80 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     
-    func createCollectionLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 15
-        layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        if(currentLayout == .pellicule) {
-            let spacing: CGFloat = 10 // Espace horizontal entre les cellules
-            let padding: CGFloat = 10 // Padding autour de la grille
-            let availableWidth = collectionView.bounds.width - (padding * 2)
-            let itemWidth = (availableWidth - spacing) / 2 // Deux éléments par ligne
-            layout.itemSize = CGSize(width: itemWidth, height: 290)
-        } else {
-            let padding: CGFloat = 10 // Padding autour de la grille
-            let availableWidth = collectionView.bounds.width - (padding * 2)
-            layout.itemSize = CGSize(width: availableWidth, height: 380)
-        }
-        
-       
-        return layout
-        
-    }
+//    func createCollectionLayout() -> UICollectionViewFlowLayout {
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .vertical
+//        layout.minimumLineSpacing = 15
+//        layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+//        if(currentLayout == .pellicule) {
+//            let spacing: CGFloat = 10 // Espace horizontal entre les cellules
+//            let padding: CGFloat = 10 // Padding autour de la grille
+//            let availableWidth = collectionView.bounds.width - (padding * 2)
+//            let itemWidth = (availableWidth - spacing) / 2 // Deux éléments par ligne
+//            layout.itemSize = CGSize(width: itemWidth, height: 290)
+//        } else {
+//            let padding: CGFloat = 10 // Padding autour de la grille
+//            let availableWidth = collectionView.bounds.width - (padding * 2)
+//            layout.itemSize = CGSize(width: availableWidth, height: 380)
+//        }
+//
+//
+//        return layout
+//
+//    }
     
     
     func createMainCollectionLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { (section, _) -> NSCollectionLayoutSection in
-            let item = NSCollectionLayoutItem(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1/2),
-                    heightDimension: .fractionalHeight(1)
+            
+            if self.currentLayout == .pellicule {
+                let item = NSCollectionLayoutItem(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1/2),
+                        heightDimension: .fractionalHeight(1)
+                    )
                 )
-            )
-            
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 7.5, bottom: 15, trailing: 7.5)
-            
-            let group = NSCollectionLayoutGroup.horizontal(
-                layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1),
-                    heightDimension: .absolute(290)
-                ),
-                subitems: [item]
-            )
+                
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 7.5, bottom: 15, trailing: 7.5)
+                
+                let group = NSCollectionLayoutGroup.horizontal(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .absolute(290)
+                    ),
+                    subitems: [item]
+                )
 
-            let listSection = NSCollectionLayoutSection(group: group)
-            
-            listSection.contentInsets = NSDirectionalEdgeInsets(top: 40, leading: 7.5, bottom: 200, trailing: 7.5)
-            
-            return listSection
+                let listSection = NSCollectionLayoutSection(group: group)
+                
+                listSection.contentInsets = NSDirectionalEdgeInsets(top: 40, leading: 7.5, bottom: 200, trailing: 7.5)
+                
+                return listSection
+            } else {
+                let item = NSCollectionLayoutItem(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .fractionalHeight(1)
+                    )
+                )
+                
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 7.5, bottom: 15, trailing: 7.5)
+                
+                let group = NSCollectionLayoutGroup.horizontal(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .absolute(380)
+                    ),
+                    subitems: [item]
+                )
+
+                let listSection = NSCollectionLayoutSection(group: group)
+                
+                listSection.contentInsets = NSDirectionalEdgeInsets(top: 40, leading: 7.5, bottom: 200, trailing: 7.5)
+                
+                return listSection
+            }
+           
         }
     }
     

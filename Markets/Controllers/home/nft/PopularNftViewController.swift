@@ -65,13 +65,13 @@ class PopularNftViewController: PagerViewController {
                 )
                 let group = NSCollectionLayoutGroup.horizontal(
                     layoutSize: NSCollectionLayoutSize(
-                        widthDimension: .absolute(230),
+                        widthDimension: .fractionalWidth(0.6),
                         heightDimension: .absolute(300)
                     ),
                     subitem: item,
-                    count: 1
+                   count: 1
                 )
-                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5)
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
                 let listSection = NSCollectionLayoutSection(group: group)
                 listSection.orthogonalScrollingBehavior = .continuous
                 
