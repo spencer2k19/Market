@@ -18,6 +18,7 @@
 		B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67ECFDC2A66AD770052CA79 /* Assets.xcassets */; };
 		B67ECFE02A66AD770052CA79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67ECFDE2A66AD770052CA79 /* LaunchScreen.storyboard */; };
 		B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */; };
+		B685EC942A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685EC932A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -90,6 +91,7 @@
 		B67ECFDF2A66AD770052CA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B67ECFE12A66AD770052CA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B685EC932A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPurchaseViewController.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				B6FC01C22A77BDE100BD56D9 /* MarketNftViewController.swift */,
 				B6FC01C42A77BDF700BD56D9 /* PrimaryNftViewController.swift */,
 				B6FC01EC2A7D0A1500BD56D9 /* DetailsAssetViewController.swift */,
+				B685EC932A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift */,
 			);
 			path = nft;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				B6FC01C12A77BDD000BD56D9 /* PopularNftViewController.swift in Sources */,
 				B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */,
 				B6FC01CC2A77EBEF00BD56D9 /* MenuTitleTabView.swift in Sources */,
+				B685EC942A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift in Sources */,
 				B6FC01A22A71753E00BD56D9 /* NFTViewController.swift in Sources */,
 				B6FC01B32A73B25D00BD56D9 /* AddWalletViewController.swift in Sources */,
 				B6FC01C92A77E9FD00BD56D9 /* TitleTabCell.swift in Sources */,

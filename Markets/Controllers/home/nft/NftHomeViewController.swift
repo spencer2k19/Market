@@ -18,9 +18,31 @@ class NftHomeViewController: UIViewController {
     var pageController = UIPageViewController()
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("View will appear is called")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("View did appear")
+    }
+    
+    override func viewSafeAreaInsetsDidChange() {
+        print("view safearea inset is changed")
+    }
+    
+    override func viewLayoutMarginsDidChange() {
+        print("view layout margins did changed")
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("View did disappear")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("view did load is called")
         menuTabView.dataArray = tabs
         menuTabView.isSizeToFitCellsNeeded = false
         menuTabView.collectionView.backgroundColor = UIColor.white

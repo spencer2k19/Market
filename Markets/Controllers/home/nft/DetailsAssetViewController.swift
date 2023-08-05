@@ -38,6 +38,7 @@ class DetailsAssetViewController: UIViewController {
     @IBOutlet weak var middleGroundContainer: UIView!
     @IBOutlet weak var mouthContainer: UIView!
     
+    @IBOutlet weak var buyButton: UIButton!
     
     
     
@@ -48,6 +49,9 @@ class DetailsAssetViewController: UIViewController {
         setupViews()
         // Do any additional setup after loading the view.
     }
+    
+    
+   
     
 
     private func setupViews() {
@@ -69,6 +73,23 @@ class DetailsAssetViewController: UIViewController {
         setupContainerView(container: middleGroundContainer)
         setupContainerView(container: mouthContainer)
         
+        //click handlers
+        let backGesture = UITapGestureRecognizer(target: self, action: #selector(onBackPressed(_:)))
+        backContainer.addGestureRecognizer(backGesture)
+        
+        buyButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPurchaseVC(_:))))
+        
+    }
+    
+    
+    @objc func showPurchaseVC(_ sender: UITapGestureRecognizer) {
+        let confirmPurchaseVC = storyboard?.instantiateViewController(withIdentifier: "confirmPurchaseVC") as! ConfirmPurchaseViewController
+        confirmPurchaseVC.modalPresentationStyle = .overFullScreen
+        self.present(confirmPurchaseVC, animated: true)
+    }
+    
+    @objc func onBackPressed(_ sender: UITapGestureRecognizer) {
+        dismiss(animated: true)
     }
     
     private func setupContainerView(container: UIView) {

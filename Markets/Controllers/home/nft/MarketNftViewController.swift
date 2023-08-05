@@ -74,10 +74,9 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nftStoryBoard = UIStoryboard.init(name: "Nft", bundle: nil)
-        let detailsVC = nftStoryBoard.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
+        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
         detailsVC.modalPresentationStyle = .overFullScreen
-        self.present(detailsVC, animated: true)
+        self.present(detailsVC,animated: true,completion: nil)
         
     }
     
