@@ -77,20 +77,24 @@ class DetailsAssetViewController: UIViewController {
         let backGesture = UITapGestureRecognizer(target: self, action: #selector(onBackPressed(_:)))
         backContainer.addGestureRecognizer(backGesture)
         
+        
+       
         buyButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showPurchaseVC(_:))))
         
     }
     
     
     @objc func showPurchaseVC(_ sender: UITapGestureRecognizer) {
-        let confirmPurchaseVC = storyboard?.instantiateViewController(withIdentifier: "confirmPurchaseVC") as! ConfirmPurchaseViewController
-        confirmPurchaseVC.modalPresentationStyle = .overFullScreen
-        self.present(confirmPurchaseVC, animated: true)
+        performSegue(withIdentifier: "goToPurchaseVC", sender: self)
+//        let confirmPurchaseVC = storyboard?.instantiateViewController(withIdentifier: "confirmPurchaseVC") as! ConfirmPurchaseViewController
+//        confirmPurchaseVC.modalPresentationStyle = .overFullScreen
+//        self.present(confirmPurchaseVC, animated: true)
     }
     
     @objc func onBackPressed(_ sender: UITapGestureRecognizer) {
-        dismiss(animated: true)
-    }
+        navigationController?.popViewController(animated: true)
+    
+        }
     
     private func setupContainerView(container: UIView) {
         container.layer.cornerRadius = 3

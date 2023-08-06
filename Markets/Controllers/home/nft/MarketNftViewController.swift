@@ -74,9 +74,10 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
-        detailsVC.modalPresentationStyle = .overFullScreen
-        self.present(detailsVC,animated: true,completion: nil)
+//        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
+//        detailsVC.modalPresentationStyle = .overFullScreen
+//        self.present(detailsVC,animated: true,completion: nil)
+        pagerDelegate?.onViewAssetDetails()
         
     }
     

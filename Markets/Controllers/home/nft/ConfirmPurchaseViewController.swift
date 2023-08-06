@@ -11,17 +11,22 @@ class ConfirmPurchaseViewController: UIViewController {
 
     @IBOutlet weak var backContainer: UIView!
     
+    @IBOutlet weak var confirmButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backContainer.layer.cornerRadius = backContainer.frame.width / 2
         // Do any additional setup after loading the view.
         backContainer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onBackPressed(_:))))
+        
+        confirmButton.addTapGestureRecognizer {
+            self.performSegue(withIdentifier: "showBidSuccessfull", sender: self)
+        }
     }
     
     
     @objc func onBackPressed(_ sender: UITapGestureRecognizer) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
 

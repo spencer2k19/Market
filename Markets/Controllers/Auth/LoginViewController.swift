@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     private func showHome() {
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let homeTabVC = storyBoard.instantiateViewController(withIdentifier: "homeTabVC")
-        homeTabVC.modalPresentationStyle = .fullScreen
+        homeTabVC.modalPresentationStyle = .overFullScreen
         self.present(homeTabVC, animated: true)
     }
     

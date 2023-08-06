@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+
+
+
+
 class NftHomeViewController: UIViewController {
    
     @IBOutlet weak var searchImage: UIImageView!
@@ -68,6 +73,13 @@ class NftHomeViewController: UIViewController {
 }
 
 
+extension NftHomeViewController: PagerNftAssetDelegate {
+    func onViewAssetDetails() {
+        self.performSegue(withIdentifier: "goToAssetDetails", sender: nil)
+    }
+}
+
+
 
 //MARK: - HELPERS
 extension NftHomeViewController {
@@ -88,11 +100,14 @@ extension NftHomeViewController {
     
     func setupPageContents() {
         let page0 = storyboard?.instantiateViewController(withIdentifier: "popularVC") as! PopularNftViewController
-        
+        page0.pagerDelegate = self
         
         let page1 = storyboard?.instantiateViewController(withIdentifier: "marketVC") as! MarketNftViewController
+        page1.pagerDelegate = self
+        
         
         let page2 = storyboard?.instantiateViewController(withIdentifier: "primaryVC") as! PrimaryNftViewController
+        page2.pagerDelegate = self
         
         tabsPage.append(contentsOf: [page0,page1,page2])
     }

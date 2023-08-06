@@ -7,8 +7,16 @@
 
 import UIKit
 
+
+protocol PagerNftAssetDelegate {
+    func onViewAssetDetails()
+}
+
+
 class PagerViewController: UIViewController {
     var pageIndex: Int = 0
+    var pagerDelegate:PagerNftAssetDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -120,9 +120,11 @@ extension PopularNftViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
-        detailsVC.modalPresentationStyle = .overFullScreen
-        self.present(detailsVC, animated: true)
+//        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "detailsAssetVC") as! DetailsAssetViewController
+//        detailsVC.modalPresentationStyle = .overFullScreen
+//        self.present(detailsVC, animated: true)
+        
+        pagerDelegate?.onViewAssetDetails()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -51,7 +51,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-nU-FNc" userLabel="Container">
-                                <rect key="frame" x="0.0" y="75" width="320" height="444"/>
+                                <rect key="frame" x="0.0" y="75" width="320" height="493"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -74,11 +74,12 @@
                         <outlet property="container" destination="Gcq-nU-FNc" id="b6A-5k-W7k"/>
                         <outlet property="menuTabView" destination="H49-Pv-y8w" id="z2n-TP-k2f"/>
                         <outlet property="searchImage" destination="XEv-WA-cTd" id="IaI-m8-Drs"/>
+                        <segue destination="D7q-Qw-Rpj" kind="show" identifier="goToAssetDetails" id="zWI-uB-lzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996.18320610687022" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1025" y="75"/>
         </scene>
         <!--Popular Nft View Controller-->
         <scene sceneID="JdB-KW-Mg3">
@@ -899,6 +900,7 @@
                             <constraint firstItem="1gz-JK-MKg" firstAttribute="width" secondItem="ZVj-cJ-VZY" secondAttribute="width" id="zpl-yC-72w"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V04-if-7aP"/>
                     <connections>
                         <outlet property="backContainer" destination="mYf-3t-OGv" id="VKq-HN-Aes"/>
                         <outlet property="bodyContainer" destination="Gfk-gU-vgw" id="YFf-vt-WBe"/>
@@ -914,11 +916,12 @@
                         <outlet property="mouthContainer" destination="epj-wT-hiA" id="tvZ-gl-9Gq"/>
                         <outlet property="priceContainer" destination="odF-Rf-JkX" id="Ssf-UG-Ods"/>
                         <outlet property="priceHistoryContainer" destination="urI-0G-bu4" id="7mc-y3-U39"/>
+                        <segue destination="rZ2-E2-cqa" kind="show" identifier="goToPurchaseVC" id="trc-4V-BJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaV-el-gMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2821" y="-1436"/>
+            <point key="canvasLocation" x="2002" y="34"/>
         </scene>
         <!--Confirm Purchase View Controller-->
         <scene sceneID="4br-Sc-ICJ">
@@ -1260,13 +1263,121 @@
                             <constraint firstItem="274-EE-fnh" firstAttribute="leading" secondItem="UIh-b3-J2Z" secondAttribute="leading" id="yDh-H6-GBw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="S25-hj-AtA"/>
                     <connections>
                         <outlet property="backContainer" destination="NRk-NP-m1z" id="tpZ-2c-6cg"/>
+                        <outlet property="confirmButton" destination="D61-Ay-lLt" id="blo-Na-o8W"/>
+                        <segue destination="cIS-pH-Fsy" kind="show" identifier="showBidSuccessfull" id="hcz-oU-gQP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNb-ci-wdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3759" y="-1436"/>
+            <point key="canvasLocation" x="3034" y="6"/>
+        </scene>
+        <!--Successfull Bid View Controller-->
+        <scene sceneID="LHc-MP-n5k">
+            <objects>
+                <viewController id="cIS-pH-Fsy" customClass="SuccessfullBidViewController" customModule="Markets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mH0-3n-X7q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vci-CT-28R" userLabel="Container">
+                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NJ3-pd-anQ">
+                                        <rect key="frame" x="0.0" y="88" width="300" height="372.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biT-gx-TgP" userLabel="imageContainer">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bid_success" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-kc-NyQ">
+                                                        <rect key="frame" x="80" y="5" width="140" height="140"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="140" id="Db1-JN-s2C"/>
+                                                            <constraint firstAttribute="height" constant="140" id="fkU-4p-rxX"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="9Ky-1a-0qK"/>
+                                                    <constraint firstItem="kr3-kc-NyQ" firstAttribute="centerX" secondItem="biT-gx-TgP" secondAttribute="centerX" id="CRF-Sg-DbR"/>
+                                                    <constraint firstItem="kr3-kc-NyQ" firstAttribute="centerY" secondItem="biT-gx-TgP" secondAttribute="centerY" id="Phs-Gm-UFe"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9J-xz-lJA" userLabel="Spacer">
+                                                <rect key="frame" x="0.0" y="150" width="300" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="0Oq-ZU-Svp"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Bid is Successful" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHa-m4-XHj">
+                                                <rect key="frame" x="0.0" y="180" width="300" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2K-zr-4YF" userLabel="Spacer">
+                                                <rect key="frame" x="0.0" y="209" width="300" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="lp8-Ao-zNR"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have successfully bid on the item  and it will be on the list" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBx-hy-qdI">
+                                                <rect key="frame" x="0.0" y="239" width="300" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UC0-rP-B71" userLabel="Spacer">
+                                                <rect key="frame" x="0.0" y="272.5" width="300" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="THR-EW-TzF"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNN-yY-4B3">
+                                                <rect key="frame" x="0.0" y="312.5" width="300" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="INC-xt-obc"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="View Item">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onViewItem:" destination="cIS-pH-Fsy" eventType="touchUpInside" id="iP5-w0-y2K"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NJ3-pd-anQ" secondAttribute="trailing" id="ISL-u2-jbT"/>
+                                    <constraint firstItem="NJ3-pd-anQ" firstAttribute="leading" secondItem="Vci-CT-28R" secondAttribute="leading" id="cXP-MZ-YTY"/>
+                                    <constraint firstItem="NJ3-pd-anQ" firstAttribute="centerY" secondItem="Vci-CT-28R" secondAttribute="centerY" id="ioN-nX-1Ew"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F2J-fP-VCK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F2J-fP-VCK" firstAttribute="trailing" secondItem="Vci-CT-28R" secondAttribute="trailing" constant="10" id="5DJ-YM-vMx"/>
+                            <constraint firstItem="Vci-CT-28R" firstAttribute="top" secondItem="F2J-fP-VCK" secondAttribute="top" constant="10" id="boj-qW-7lb"/>
+                            <constraint firstItem="F2J-fP-VCK" firstAttribute="bottom" secondItem="Vci-CT-28R" secondAttribute="bottom" constant="10" id="dkv-dl-YiR"/>
+                            <constraint firstItem="Vci-CT-28R" firstAttribute="leading" secondItem="F2J-fP-VCK" secondAttribute="leading" constant="10" id="saL-V2-Toq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O8j-pD-lkk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2O-gT-eYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4109" y="-3"/>
         </scene>
         <!--Market Nft View Controller-->
         <scene sceneID="vze-sJ-elK">
@@ -1386,7 +1497,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jEq-K2-Jf0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="NFT" image="square.and.arrow.up.circle" catalog="system" id="hq5-5w-y8p"/>
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfp-Oa-cLA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1406,6 +1516,7 @@
     <resources>
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="120"/>
         <image name="bg" width="32" height="32"/>
+        <image name="bid_success" width="420" height="420"/>
         <image name="cart.badge.plus" catalog="system" width="128" height="103"/>
         <image name="chart" width="981" height="778"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
