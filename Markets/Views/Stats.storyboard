@@ -147,9 +147,71 @@
                     <view key="view" contentMode="scaleToFill" id="fby-E0-kX4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G1-VX-ome">
+                                <rect key="frame" x="10" y="69" width="76.333333333333329" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.down.fill" catalog="system" imagePlacement="trailing" title="Sales" imagePadding="4">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                    <color key="baseForegroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aP-td-tb6">
+                                <rect key="frame" x="279.66666666666669" y="69" width="103.33333333333331" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.down.fill" catalog="system" imagePlacement="trailing" title="Ethereum" imagePadding="4">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                    <color key="baseForegroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mdi_ethereum" translatesAutoresizingMaskIntoConstraints="NO" id="Y3P-YT-1zu">
+                                <rect key="frame" x="258.66666666666669" y="78.333333333333329" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Sh6-pA-D6w"/>
+                                    <constraint firstAttribute="height" constant="16" id="rAH-cx-L8L"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WbY-gP-dnG">
+                                <rect key="frame" x="0.0" y="113.33333333333331" width="393" height="704.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gYQ-NG-jXd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0uH-r0-Tio">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tds-DX-grm">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oUX-7a-FHu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WbY-gP-dnG" firstAttribute="leading" secondItem="oUX-7a-FHu" secondAttribute="leading" id="5pH-7r-D88"/>
+                            <constraint firstItem="oUX-7a-FHu" firstAttribute="bottom" secondItem="WbY-gP-dnG" secondAttribute="bottom" id="8Uf-N7-RN4"/>
+                            <constraint firstItem="WbY-gP-dnG" firstAttribute="top" secondItem="5G1-VX-ome" secondAttribute="bottom" constant="10" id="8lj-Vu-H7R"/>
+                            <constraint firstItem="oUX-7a-FHu" firstAttribute="trailing" secondItem="2aP-td-tb6" secondAttribute="trailing" constant="10" id="EPb-X4-XFf"/>
+                            <constraint firstItem="Y3P-YT-1zu" firstAttribute="centerY" secondItem="2aP-td-tb6" secondAttribute="centerY" id="Pqj-mU-nf8"/>
+                            <constraint firstItem="5G1-VX-ome" firstAttribute="leading" secondItem="oUX-7a-FHu" secondAttribute="leading" constant="10" id="SdC-P1-UeV"/>
+                            <constraint firstItem="5G1-VX-ome" firstAttribute="top" secondItem="oUX-7a-FHu" secondAttribute="top" constant="10" id="blX-mr-CGU"/>
+                            <constraint firstItem="2aP-td-tb6" firstAttribute="leading" secondItem="Y3P-YT-1zu" secondAttribute="trailing" constant="5" id="hVZ-kG-YNA"/>
+                            <constraint firstItem="oUX-7a-FHu" firstAttribute="trailing" secondItem="WbY-gP-dnG" secondAttribute="trailing" id="nUQ-ZQ-Ryi"/>
+                            <constraint firstItem="2aP-td-tb6" firstAttribute="centerY" secondItem="5G1-VX-ome" secondAttribute="centerY" id="x31-l0-wf9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="WbY-gP-dnG" id="X79-XK-sNH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aip-ZB-y0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,6 +241,7 @@
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="120"/>
         <image name="link" catalog="system" width="128" height="124"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="mdi_ethereum" width="54" height="55"/>
         <image name="menucard" catalog="system" width="108" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
