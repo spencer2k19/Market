@@ -1,68 +1,61 @@
 //
-//  NFTViewController.swift
+//  StatsHomeViewController.swift
 //  Markets
 //
-//  Created by Loic HACHEME on 31/07/2023.
+//  Created by Loic HACHEME on 07/08/2023.
 //
 
 import UIKit
 
+class StatsHomeViewController: UIViewController {
 
-
-
-
-
-class NftHomeViewController: UIViewController {
-   
-    @IBOutlet weak var searchImage: UIImageView!
-    @IBOutlet weak var container: UIView!
     @IBOutlet weak var menuTabView: MenuTitleTabView!
-    var currentIndex: Int = 0
-    var tabs = ["Popular","Market","Primary"]
+    @IBOutlet weak var container: UIView!
+    
+    @IBOutlet weak var searchImageView: UIImageView!
+    var currentIndex:Int = 0
+    var tabs = ["Rankings","Activity"]
     var tabsPage: [PagerViewController] = []
     var pageController = UIPageViewController()
-    
-    
-  
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         menuTabView.dataArray = tabs
-        menuTabView.isSizeToFitCellsNeeded = false
-        menuTabView.collectionView.backgroundColor = UIColor.white
+        menuTabView.isSizeToFitCellsNeeded = true
+        menuTabView.collectionView.backgroundColor = .white
         
         presentPageVCOnView()
         setupPageContents()
         menuTabView.menuDelegate = self
-        
         pageController.delegate = self
         pageController.dataSource = self
         
-        //For initial display
         
+        //For initial display
         menuTabView.collectionView.selectItem(at: IndexPath.init(item: 0, section: 0), animated: true, scrollPosition: .centeredVertically)
         
         pageController.setViewControllers([viewController(At: 0)!], direction: .forward, animated: true)
         
-        
-
+       
     }
     
 
-}
+    /*
+    // MARK: - Navigation
 
-
-extension NftHomeViewController: PagerNftAssetDelegate {
-    func onViewAssetDetails() {
-        self.performSegue(withIdentifier: "goToAssetDetails", sender: self)
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }
 
 
 
 //MARK: - HELPERS
-extension NftHomeViewController {
+extension StatsHomeViewController {
     func presentPageVCOnView() {
         self.pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         
@@ -79,21 +72,16 @@ extension NftHomeViewController {
     
     
     func setupPageContents() {
-        let page0 = storyboard?.instantiateViewController(withIdentifier: "popularVC") as! PopularNftViewController
-        page0.pagerDelegate = self
+        let page0 = storyboard?.instantiateViewController(withIdentifier: "rankingsVC") as! RankingsViewController
         
-        let page1 = storyboard?.instantiateViewController(withIdentifier: "marketVC") as! MarketNftViewController
-        page1.pagerDelegate = self
+        let page1 = storyboard?.instantiateViewController(withIdentifier: "activityVC") as! ActivityViewController
         
-        
-        let page2 = storyboard?.instantiateViewController(withIdentifier: "primaryVC") as! PrimaryNftViewController
-        page2.pagerDelegate = self
-        
-        tabsPage.append(contentsOf: [page0,page1,page2])
+        tabsPage.append(contentsOf: [page0,page1])
     }
     
     
     //present view controller at the given index
+    
     func viewController(At index: Int) -> UIViewController? {
         if((self.menuTabView.dataArray.count == 0) || (index >= menuTabView.dataArray.count)) {
             return nil
@@ -104,13 +92,12 @@ extension NftHomeViewController {
         currentIndex = index
         return contentVC
     }
+    
 }
 
 
-
-
 //MARK: - Menubar delegate
-extension NftHomeViewController: MenuTitleBarDelegate {
+extension StatsHomeViewController: MenuTitleBarDelegate {
     func menubarDidSelectItemAt(menu: MenuTitleTabView, index: Int) {
         
         //if selected index is other than selected one, by comparing with current index, page controller goes either forward or backward.
@@ -133,7 +120,7 @@ extension NftHomeViewController: MenuTitleBarDelegate {
 
 //MARK: - PageController delegate and datasource
 
-extension NftHomeViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+extension StatsHomeViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         var index = (viewController as! PagerViewController).pageIndex
@@ -175,5 +162,4 @@ extension NftHomeViewController: UIPageViewControllerDataSource, UIPageViewContr
     
     
 }
-
 

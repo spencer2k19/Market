@@ -20,6 +20,12 @@
 		B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */; };
 		B685EC942A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685EC932A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift */; };
 		B685EC962A7FFCAF007E5A4B /* SuccessfullBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685EC952A7FFCAF007E5A4B /* SuccessfullBidViewController.swift */; };
+		B685EC9A2A80DF70007E5A4B /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685EC982A80DF70007E5A4B /* StatCell.swift */; };
+		B685EC9B2A80DF70007E5A4B /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685EC992A80DF70007E5A4B /* StatCell.xib */; };
+		B685EC9E2A80ED6B007E5A4B /* StatsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685EC9D2A80ED6B007E5A4B /* StatsHomeViewController.swift */; };
+		B685ECA02A80EECC007E5A4B /* RankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685EC9F2A80EECC007E5A4B /* RankingsViewController.swift */; };
+		B685ECA22A80EEDC007E5A4B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECA12A80EEDC007E5A4B /* ActivityViewController.swift */; };
+		B685ECA42A80FEAC007E5A4B /* StatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECA32A80FEAC007E5A4B /* StatData.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -94,6 +100,12 @@
 		B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B685EC932A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPurchaseViewController.swift; sourceTree = "<group>"; };
 		B685EC952A7FFCAF007E5A4B /* SuccessfullBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullBidViewController.swift; sourceTree = "<group>"; };
+		B685EC982A80DF70007E5A4B /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
+		B685EC992A80DF70007E5A4B /* StatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
+		B685EC9D2A80ED6B007E5A4B /* StatsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsHomeViewController.swift; sourceTree = "<group>"; };
+		B685EC9F2A80EECC007E5A4B /* RankingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewController.swift; sourceTree = "<group>"; };
+		B685ECA12A80EEDC007E5A4B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		B685ECA32A80FEAC007E5A4B /* StatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatData.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +236,7 @@
 				B6FC019A2A713C6400BD56D9 /* AssetData.swift */,
 				B6FC01B02A72D08900BD56D9 /* WalletTypeData.swift */,
 				B6FC01D32A780A6700BD56D9 /* NftData.swift */,
+				B685ECA32A80FEAC007E5A4B /* StatData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +276,25 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		B685EC972A80DF40007E5A4B /* StatCell */ = {
+			isa = PBXGroup;
+			children = (
+				B685EC982A80DF70007E5A4B /* StatCell.swift */,
+				B685EC992A80DF70007E5A4B /* StatCell.xib */,
+			);
+			path = StatCell;
+			sourceTree = "<group>";
+		};
+		B685EC9C2A80ED4D007E5A4B /* stat */ = {
+			isa = PBXGroup;
+			children = (
+				B685EC9D2A80ED6B007E5A4B /* StatsHomeViewController.swift */,
+				B685EC9F2A80EECC007E5A4B /* RankingsViewController.swift */,
+				B685ECA12A80EEDC007E5A4B /* ActivityViewController.swift */,
+			);
+			path = stat;
+			sourceTree = "<group>";
+		};
 		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +319,7 @@
 		B6FC01762A6D536A00BD56D9 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				B685EC9C2A80ED4D007E5A4B /* stat */,
 				B6FC01BF2A77BACB00BD56D9 /* pager */,
 				B6FC01BC2A77B7FE00BD56D9 /* nft */,
 				B6FC01802A7087EA00BD56D9 /* wallet */,
@@ -324,6 +357,7 @@
 		B6FC018F2A71160900BD56D9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				B685EC972A80DF40007E5A4B /* StatCell */,
 				B6FC01E72A7B124700BD56D9 /* CollectionHeaderView */,
 				B6FC01E22A7ABF2700BD56D9 /* NftCollectionCell */,
 				B6FC01DD2A7AB85800BD56D9 /* PopularNftCell */,
@@ -520,6 +554,7 @@
 				B6FC01712A6D506000BD56D9 /* Nft.storyboard in Resources */,
 				B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */,
 				B6FC01EB2A7B127800BD56D9 /* CollectionHeaderView.xib in Resources */,
+				B685EC9B2A80DF70007E5A4B /* StatCell.xib in Resources */,
 				B6FC01CA2A77E9FD00BD56D9 /* TitleTabCell.xib in Resources */,
 				B6FC01D22A78099B00BD56D9 /* NftGridCell.xib in Resources */,
 				B6FC01942A71164E00BD56D9 /* TabCell.xib in Resources */,
@@ -578,15 +613,20 @@
 				B6FC01AE2A72BA2500BD56D9 /* WalletTypeCell.swift in Sources */,
 				B6FC01B52A73C92600BD56D9 /* NSMutableAttributedString.swift in Sources */,
 				B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */,
+				B685EC9E2A80ED6B007E5A4B /* StatsHomeViewController.swift in Sources */,
 				B6FC01632A6C79CE00BD56D9 /* RectanglePageControl.swift in Sources */,
 				B6FC01AA2A72B65D00BD56D9 /* WalletManageViewController.swift in Sources */,
+				B685ECA42A80FEAC007E5A4B /* StatData.swift in Sources */,
 				B6FC01A62A72843A00BD56D9 /* PagerPageViewController.swift in Sources */,
 				B6FC019E2A7140FA00BD56D9 /* AssetCell.swift in Sources */,
+				B685ECA02A80EECC007E5A4B /* RankingsViewController.swift in Sources */,
 				B6FC01D42A780A6700BD56D9 /* NftData.swift in Sources */,
+				B685ECA22A80EEDC007E5A4B /* ActivityViewController.swift in Sources */,
 				B6FC01ED2A7D0A1500BD56D9 /* DetailsAssetViewController.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
 				B6FC017D2A6FCFF600BD56D9 /* UIView.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,
+				B685EC9A2A80DF70007E5A4B /* StatCell.swift in Sources */,
 				B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */,
 				B6FC01E02A7AB87000BD56D9 /* PopularNftCell.swift in Sources */,
 				B6FC01E52A7ABF4100BD56D9 /* NftCollectionCell.swift in Sources */,
