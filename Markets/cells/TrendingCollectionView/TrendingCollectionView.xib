@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendingCollectionView" id="U6b-Vx-4bR" customClass="TrendingCollectionView" customModule="Markets" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqo-ae-Qe3" userLabel="Container">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending collections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opW-qL-S9A">
+                            <rect key="frame" x="0.0" y="15.333333333333334" width="153.33333333333334" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="opW-qL-S9A" firstAttribute="centerY" secondItem="mqo-ae-Qe3" secondAttribute="centerY" id="NHT-hW-GUD"/>
+                        <constraint firstItem="opW-qL-S9A" firstAttribute="leading" secondItem="mqo-ae-Qe3" secondAttribute="leading" id="Ty0-7a-xPV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="mqo-ae-Qe3" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="EL7-P3-G8p"/>
+                <constraint firstAttribute="bottom" secondItem="mqo-ae-Qe3" secondAttribute="bottom" id="Ql4-gr-JqN"/>
+                <constraint firstItem="mqo-ae-Qe3" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="Rb6-gn-Ngk"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="mqo-ae-Qe3" secondAttribute="trailing" id="yyE-WL-pnk"/>
+            </constraints>
+            <point key="canvasLocation" x="200" y="18"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -29,6 +29,17 @@
 		B685ECA82A8104F9007E5A4B /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECA62A8104F9007E5A4B /* ActivityCell.swift */; };
 		B685ECA92A8104F9007E5A4B /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECA72A8104F9007E5A4B /* ActivityCell.xib */; };
 		B685ECAB2A8108F1007E5A4B /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECAA2A8108F1007E5A4B /* ActivityData.swift */; };
+		B685ECAF2A823514007E5A4B /* RecentSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECAD2A823514007E5A4B /* RecentSearchCell.swift */; };
+		B685ECB02A823514007E5A4B /* RecentSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECAE2A823514007E5A4B /* RecentSearchCell.xib */; };
+		B685ECB22A823605007E5A4B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECB12A823605007E5A4B /* Category.swift */; };
+		B685ECB62A8236DC007E5A4B /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECB42A8236DC007E5A4B /* CollectionCell.swift */; };
+		B685ECB72A8236DC007E5A4B /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECB52A8236DC007E5A4B /* CollectionCell.xib */; };
+		B685ECB92A823A8E007E5A4B /* CollectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECB82A823A8E007E5A4B /* CollectionData.swift */; };
+		B685ECBC2A823E38007E5A4B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECBB2A823E38007E5A4B /* SearchViewController.swift */; };
+		B685ECC02A826901007E5A4B /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECBE2A826901007E5A4B /* CategoryHeaderView.swift */; };
+		B685ECC12A826901007E5A4B /* CategoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECBF2A826901007E5A4B /* CategoryHeaderView.xib */; };
+		B685ECC52A826994007E5A4B /* TrendingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECC32A826994007E5A4B /* TrendingCollectionView.swift */; };
+		B685ECC62A826994007E5A4B /* TrendingCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -112,6 +123,17 @@
 		B685ECA62A8104F9007E5A4B /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		B685ECA72A8104F9007E5A4B /* ActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		B685ECAA2A8108F1007E5A4B /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
+		B685ECAD2A823514007E5A4B /* RecentSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCell.swift; sourceTree = "<group>"; };
+		B685ECAE2A823514007E5A4B /* RecentSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSearchCell.xib; sourceTree = "<group>"; };
+		B685ECB12A823605007E5A4B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B685ECB42A8236DC007E5A4B /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		B685ECB52A8236DC007E5A4B /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		B685ECB82A823A8E007E5A4B /* CollectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionData.swift; sourceTree = "<group>"; };
+		B685ECBB2A823E38007E5A4B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B685ECBE2A826901007E5A4B /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
+		B685ECBF2A826901007E5A4B /* CategoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHeaderView.xib; sourceTree = "<group>"; };
+		B685ECC32A826994007E5A4B /* TrendingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionView.swift; sourceTree = "<group>"; };
+		B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingCollectionView.xib; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +266,8 @@
 				B6FC01D32A780A6700BD56D9 /* NftData.swift */,
 				B685ECA32A80FEAC007E5A4B /* StatData.swift */,
 				B685ECAA2A8108F1007E5A4B /* ActivityData.swift */,
+				B685ECB12A823605007E5A4B /* Category.swift */,
+				B685ECB82A823A8E007E5A4B /* CollectionData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +335,50 @@
 			path = activityCell;
 			sourceTree = "<group>";
 		};
+		B685ECAC2A8234FB007E5A4B /* RecentSearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECAD2A823514007E5A4B /* RecentSearchCell.swift */,
+				B685ECAE2A823514007E5A4B /* RecentSearchCell.xib */,
+			);
+			path = RecentSearchCell;
+			sourceTree = "<group>";
+		};
+		B685ECB32A8236C6007E5A4B /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECB42A8236DC007E5A4B /* CollectionCell.swift */,
+				B685ECB52A8236DC007E5A4B /* CollectionCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		B685ECBA2A823E22007E5A4B /* search */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECBB2A823E38007E5A4B /* SearchViewController.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		B685ECBD2A8268E0007E5A4B /* CategoryHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECBE2A826901007E5A4B /* CategoryHeaderView.swift */,
+				B685ECBF2A826901007E5A4B /* CategoryHeaderView.xib */,
+			);
+			path = CategoryHeaderView;
+			sourceTree = "<group>";
+		};
+		B685ECC22A82697E007E5A4B /* TrendingCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECC32A826994007E5A4B /* TrendingCollectionView.swift */,
+				B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */,
+			);
+			path = TrendingCollectionView;
+			sourceTree = "<group>";
+		};
 		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +403,7 @@
 		B6FC01762A6D536A00BD56D9 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				B685ECBA2A823E22007E5A4B /* search */,
 				B685EC9C2A80ED4D007E5A4B /* stat */,
 				B6FC01BF2A77BACB00BD56D9 /* pager */,
 				B6FC01BC2A77B7FE00BD56D9 /* nft */,
@@ -373,6 +442,10 @@
 		B6FC018F2A71160900BD56D9 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				B685ECC22A82697E007E5A4B /* TrendingCollectionView */,
+				B685ECBD2A8268E0007E5A4B /* CategoryHeaderView */,
+				B685ECB32A8236C6007E5A4B /* CollectionCell */,
+				B685ECAC2A8234FB007E5A4B /* RecentSearchCell */,
 				B685ECA52A8104E0007E5A4B /* activityCell */,
 				B685EC972A80DF40007E5A4B /* StatCell */,
 				B6FC01E72A7B124700BD56D9 /* CollectionHeaderView */,
@@ -569,6 +642,7 @@
 				B6FC016D2A6D502C00BD56D9 /* Wallet.storyboard in Resources */,
 				B6FC016F2A6D504C00BD56D9 /* Dex.storyboard in Resources */,
 				B6FC01712A6D506000BD56D9 /* Nft.storyboard in Resources */,
+				B685ECB02A823514007E5A4B /* RecentSearchCell.xib in Resources */,
 				B67ECFDD2A66AD770052CA79 /* Assets.xcassets in Resources */,
 				B6FC01EB2A7B127800BD56D9 /* CollectionHeaderView.xib in Resources */,
 				B685ECA92A8104F9007E5A4B /* ActivityCell.xib in Resources */,
@@ -577,12 +651,15 @@
 				B6FC01D22A78099B00BD56D9 /* NftGridCell.xib in Resources */,
 				B6FC01942A71164E00BD56D9 /* TabCell.xib in Resources */,
 				B67ECFDB2A66AD760052CA79 /* Main.storyboard in Resources */,
+				B685ECC62A826994007E5A4B /* TrendingCollectionView.xib in Resources */,
 				B6FC01752A6D507D00BD56D9 /* Profile.storyboard in Resources */,
+				B685ECC12A826901007E5A4B /* CategoryHeaderView.xib in Resources */,
 				B6FC01E62A7ABF4100BD56D9 /* NftCollectionCell.xib in Resources */,
 				B6FC01732A6D506E00BD56D9 /* Stats.storyboard in Resources */,
 				B6FC019F2A7140FA00BD56D9 /* AssetCell.xib in Resources */,
 				B6FC01AF2A72BA2500BD56D9 /* WalletTypeCell.xib in Resources */,
 				B6FC01DC2A7A871200BD56D9 /* NftListCell.xib in Resources */,
+				B685ECB72A8236DC007E5A4B /* CollectionCell.xib in Resources */,
 				B6FC01E12A7AB87000BD56D9 /* PopularNftCell.xib in Resources */,
 				B6FC01692A6C7CD400BD56D9 /* Slide.xib in Resources */,
 			);
@@ -606,6 +683,7 @@
 				B6FC01A22A71753E00BD56D9 /* NFTViewController.swift in Sources */,
 				B6FC01B32A73B25D00BD56D9 /* AddWalletViewController.swift in Sources */,
 				B685ECA82A8104F9007E5A4B /* ActivityCell.swift in Sources */,
+				B685ECB22A823605007E5A4B /* Category.swift in Sources */,
 				B6FC01C92A77E9FD00BD56D9 /* TitleTabCell.swift in Sources */,
 				B6FC01D72A79CAB000BD56D9 /* DisplayType.swift in Sources */,
 				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
@@ -615,6 +693,7 @@
 				B6FC01A82A72849400BD56D9 /* SlideViewController.swift in Sources */,
 				B6FC019B2A713C6400BD56D9 /* AssetData.swift in Sources */,
 				B60A64682A68476F009EB2F4 /* UIColor.swift in Sources */,
+				B685ECC02A826901007E5A4B /* CategoryHeaderView.swift in Sources */,
 				B685ECAB2A8108F1007E5A4B /* ActivityData.swift in Sources */,
 				B6FC01842A708A7E00BD56D9 /* AssetsViewController.swift in Sources */,
 				B60091492A6703C100CCAE26 /* RegisterViewController.swift in Sources */,
@@ -624,8 +703,10 @@
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
 				B6FC017B2A6EE88600BD56D9 /* MenuTabsView.swift in Sources */,
+				B685ECB62A8236DC007E5A4B /* CollectionCell.swift in Sources */,
 				B6FC01D12A78099B00BD56D9 /* NftGridCell.swift in Sources */,
 				B6FC01C32A77BDE100BD56D9 /* MarketNftViewController.swift in Sources */,
+				B685ECAF2A823514007E5A4B /* RecentSearchCell.swift in Sources */,
 				B6FC01BB2A7545E600BD56D9 /* PrivacyViewController.swift in Sources */,
 				B6FC01A42A71754E00BD56D9 /* DeFiViewController.swift in Sources */,
 				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
@@ -649,8 +730,11 @@
 				B685EC9A2A80DF70007E5A4B /* StatCell.swift in Sources */,
 				B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */,
 				B6FC01E02A7AB87000BD56D9 /* PopularNftCell.swift in Sources */,
+				B685ECBC2A823E38007E5A4B /* SearchViewController.swift in Sources */,
+				B685ECB92A823A8E007E5A4B /* CollectionData.swift in Sources */,
 				B6FC01E52A7ABF4100BD56D9 /* NftCollectionCell.swift in Sources */,
 				B6FC01B12A72D08900BD56D9 /* WalletTypeData.swift in Sources */,
+				B685ECC52A826994007E5A4B /* TrendingCollectionView.swift in Sources */,
 				B6FC01B92A75351400BD56D9 /* TermServiceViewController.swift in Sources */,
 				B6FC01782A6D53A500BD56D9 /* HomeTabViewController.swift in Sources */,
 			);
