@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var logoutBtn: UIButton!
     
+    @IBOutlet weak var accountInformationContainer: UIView!
     
     
     override func viewDidLoad() {
@@ -31,19 +32,14 @@ class SettingsViewController: UIViewController {
         accountContainer.layer.cornerRadius = 6
         privacyContainer.layer.cornerRadius = 6
         avatarImage.clipsToBounds = true
-        avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
-        
-//        HStack(alignment: .center, spacing: 0) { ... }
-//        .padding(.horizontal, 122)
-//        .padding(.vertical, 16)
-//        .frame(width: 327, alignment: .center)
-//        .background(Color(red: 0.95, green: 0.96, blue: 0.96))
-//        .cornerRadius(3)
-//        .shadow(color: .black.opacity(0.04), radius: 6, x: 0, y: 8)
-        
+        avatarImage.layer.cornerRadius = avatarImage.frame.width / 2        
         logoutBtn.layer.shadowColor = UIColor.black.withAlphaComponent(0.04).cgColor
         logoutBtn.layer.cornerRadius = 6
         logoutBtn.layer.shadowOffset = CGSize(width: 0, height: 10)
+        
+        accountInformationContainer.addTapGestureRecognizer {
+            self.performSegue(withIdentifier: "goToAccount", sender: self)
+        }
 
     }
 
