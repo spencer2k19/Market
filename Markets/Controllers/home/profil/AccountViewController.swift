@@ -31,6 +31,10 @@ class AccountViewController: UIViewController {
         backContainer.layer.cornerRadius = backContainer.frame.width / 2
         avatarImage.clipsToBounds = true
         avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
+        
+        backContainer.addTapGestureRecognizer {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
 

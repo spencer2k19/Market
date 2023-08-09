@@ -42,6 +42,7 @@
 		B685ECC62A826994007E5A4B /* TrendingCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */; };
 		B685ECC92A839704007E5A4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECC82A839704007E5A4B /* SettingsViewController.swift */; };
 		B685ECCB2A83DA42007E5A4B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCA2A83DA42007E5A4B /* AccountViewController.swift */; };
+		B685ECCD2A83E1B9007E5A4B /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -138,6 +139,7 @@
 		B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingCollectionView.xib; sourceTree = "<group>"; };
 		B685ECC82A839704007E5A4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B685ECCA2A83DA42007E5A4B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			children = (
 				B685ECC82A839704007E5A4B /* SettingsViewController.swift */,
 				B685ECCA2A83DA42007E5A4B /* AccountViewController.swift */,
+				B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */,
 			);
 			path = profil;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				B685ECA82A8104F9007E5A4B /* ActivityCell.swift in Sources */,
 				B685ECB22A823605007E5A4B /* Category.swift in Sources */,
 				B6FC01C92A77E9FD00BD56D9 /* TitleTabCell.swift in Sources */,
+				B685ECCD2A83E1B9007E5A4B /* SecurityViewController.swift in Sources */,
 				B6FC01D72A79CAB000BD56D9 /* DisplayType.swift in Sources */,
 				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
 				B6FC01862A708C7A00BD56D9 /* PagerViewController.swift in Sources */,
