@@ -24,6 +24,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var securityContainer: UIView!
     
+    @IBOutlet weak var billingContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,15 @@ class SettingsViewController: UIViewController {
         
         securityContainer.addTapGestureRecognizer {
             self.performSegue(withIdentifier: "goToSecurity", sender: self)
+        }
+        
+        billingContainer.addTapGestureRecognizer {
+            self.performSegue(withIdentifier: "goToBilling", sender: self)
+        }
+        
+        
+        notificationContainer.addTapGestureRecognizer {
+            self.performSegue(withIdentifier: "goToNotifications", sender: self)
         }
 
     }

@@ -43,6 +43,8 @@
 		B685ECC92A839704007E5A4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECC82A839704007E5A4B /* SettingsViewController.swift */; };
 		B685ECCB2A83DA42007E5A4B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCA2A83DA42007E5A4B /* AccountViewController.swift */; };
 		B685ECCD2A83E1B9007E5A4B /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */; };
+		B685ECCF2A83EDBA007E5A4B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCE2A83EDBA007E5A4B /* NotificationViewController.swift */; };
+		B685ECD12A844158007E5A4B /* BillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECD02A844158007E5A4B /* BillingViewController.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -140,6 +142,8 @@
 		B685ECC82A839704007E5A4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B685ECCA2A83DA42007E5A4B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		B685ECCE2A83EDBA007E5A4B /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		B685ECD02A844158007E5A4B /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 				B685ECC82A839704007E5A4B /* SettingsViewController.swift */,
 				B685ECCA2A83DA42007E5A4B /* AccountViewController.swift */,
 				B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */,
+				B685ECCE2A83EDBA007E5A4B /* NotificationViewController.swift */,
+				B685ECD02A844158007E5A4B /* BillingViewController.swift */,
 			);
 			path = profil;
 			sourceTree = "<group>";
@@ -718,6 +724,7 @@
 				B60091492A6703C100CCAE26 /* RegisterViewController.swift in Sources */,
 				B67ECFD82A66AD760052CA79 /* ViewController.swift in Sources */,
 				B6FC01822A70881B00BD56D9 /* WalletViewController.swift in Sources */,
+				B685ECCF2A83EDBA007E5A4B /* NotificationViewController.swift in Sources */,
 				B6FC01EA2A7B127800BD56D9 /* CollectionHeaderView.swift in Sources */,
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B67ECFD42A66AD760052CA79 /* AppDelegate.swift in Sources */,
@@ -752,6 +759,7 @@
 				B6FC01E02A7AB87000BD56D9 /* PopularNftCell.swift in Sources */,
 				B685ECBC2A823E38007E5A4B /* SearchViewController.swift in Sources */,
 				B685ECB92A823A8E007E5A4B /* CollectionData.swift in Sources */,
+				B685ECD12A844158007E5A4B /* BillingViewController.swift in Sources */,
 				B6FC01E52A7ABF4100BD56D9 /* NftCollectionCell.swift in Sources */,
 				B6FC01B12A72D08900BD56D9 /* WalletTypeData.swift in Sources */,
 				B685ECC52A826994007E5A4B /* TrendingCollectionView.swift in Sources */,
