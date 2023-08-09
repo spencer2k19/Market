@@ -40,6 +40,7 @@
 		B685ECC12A826901007E5A4B /* CategoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECBF2A826901007E5A4B /* CategoryHeaderView.xib */; };
 		B685ECC52A826994007E5A4B /* TrendingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECC32A826994007E5A4B /* TrendingCollectionView.swift */; };
 		B685ECC62A826994007E5A4B /* TrendingCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */; };
+		B685ECC92A839704007E5A4B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECC82A839704007E5A4B /* SettingsViewController.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -134,6 +135,7 @@
 		B685ECBF2A826901007E5A4B /* CategoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHeaderView.xib; sourceTree = "<group>"; };
 		B685ECC32A826994007E5A4B /* TrendingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionView.swift; sourceTree = "<group>"; };
 		B685ECC42A826994007E5A4B /* TrendingCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingCollectionView.xib; sourceTree = "<group>"; };
+		B685ECC82A839704007E5A4B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +381,14 @@
 			path = TrendingCollectionView;
 			sourceTree = "<group>";
 		};
+		B685ECC72A8396EE007E5A4B /* profil */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECC82A839704007E5A4B /* SettingsViewController.swift */,
+			);
+			path = profil;
+			sourceTree = "<group>";
+		};
 		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +413,7 @@
 		B6FC01762A6D536A00BD56D9 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				B685ECC72A8396EE007E5A4B /* profil */,
 				B685ECBA2A823E22007E5A4B /* search */,
 				B685EC9C2A80ED4D007E5A4B /* stat */,
 				B6FC01BF2A77BACB00BD56D9 /* pager */,
@@ -707,6 +718,7 @@
 				B6FC01D12A78099B00BD56D9 /* NftGridCell.swift in Sources */,
 				B6FC01C32A77BDE100BD56D9 /* MarketNftViewController.swift in Sources */,
 				B685ECAF2A823514007E5A4B /* RecentSearchCell.swift in Sources */,
+				B685ECC92A839704007E5A4B /* SettingsViewController.swift in Sources */,
 				B6FC01BB2A7545E600BD56D9 /* PrivacyViewController.swift in Sources */,
 				B6FC01A42A71754E00BD56D9 /* DeFiViewController.swift in Sources */,
 				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
