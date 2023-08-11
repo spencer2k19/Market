@@ -19,6 +19,20 @@ extension UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: formate, metrics: nil, views: viewsDictionnary))
     }
     
+    
+    // Drop shadow
+     func dropShadow(scale: Bool = true) {
+       layer.masksToBounds = false
+       layer.shadowColor = UIColor.black.cgColor
+       layer.shadowOpacity = 0.5
+       layer.shadowOffset = CGSize(width: -1, height: 1)
+       layer.shadowRadius = 1
+
+       layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+       layer.shouldRasterize = true
+       layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+     }
+    
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {

@@ -25,7 +25,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-Du-QWA">
-                                <rect key="frame" x="359" y="83" width="24" height="22.333333333333329"/>
+                                <rect key="frame" x="359" y="83" width="24" height="22.333333333333343"/>
                                 <color key="tintColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="Qgs-q5-Uhc"/>
@@ -56,11 +56,22 @@
                         <outlet property="container" destination="Who-96-9EZ" id="2x7-K9-UGb"/>
                         <outlet property="menuTabView" destination="Shc-YU-dT3" id="miC-hT-pCE"/>
                         <outlet property="searchImageView" destination="qeU-Du-QWA" id="eCz-ib-K8r"/>
+                        <segue destination="BQY-rD-j8v" kind="show" identifier="goToAssetDetails" id="xpF-Yq-YR5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996.18320610687022" y="-2.1126760563380285"/>
+        </scene>
+        <!--detailsAssetVC-->
+        <scene sceneID="As2-zy-ZSB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Nft" referencedIdentifier="detailsAssetVC" id="BQY-rD-j8v" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4RK-EE-e9g"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uq5-S4-SxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="-17"/>
         </scene>
         <!--Rankings View Controller-->
         <scene sceneID="uCn-fw-6e7">
@@ -80,7 +91,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoR-5P-m7h">
-                                <rect key="frame" x="277" y="68.666666666666671" width="106" height="35"/>
+                                <rect key="frame" x="277" y="68.666666666666671" width="106" height="34.999999999999986"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.down.fill" catalog="system" imagePlacement="trailing" title="All Chains" imagePadding="4">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>

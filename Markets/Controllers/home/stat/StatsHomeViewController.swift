@@ -40,15 +40,7 @@ class StatsHomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
 
@@ -73,8 +65,11 @@ extension StatsHomeViewController {
     
     func setupPageContents() {
         let page0 = storyboard?.instantiateViewController(withIdentifier: "rankingsVC") as! RankingsViewController
+        page0.pagerDelegate = self
         
         let page1 = storyboard?.instantiateViewController(withIdentifier: "activityVC") as! ActivityViewController
+        
+        page1.pagerDelegate = self
         
         tabsPage.append(contentsOf: [page0,page1])
     }
@@ -114,6 +109,15 @@ extension StatsHomeViewController: MenuTitleBarDelegate {
     }
     
     
+}
+
+
+
+//MARK: - Pager deleguate
+extension StatsHomeViewController: PagerNftAssetDelegate {
+    func onViewAssetDetails() {
+        self.performSegue(withIdentifier: "goToAssetDetails", sender: self)
+    }
 }
 
 

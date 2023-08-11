@@ -59,6 +59,19 @@ class SettingsViewController: UIViewController {
         notificationContainer.addTapGestureRecognizer {
             self.performSegue(withIdentifier: "goToNotifications", sender: self)
         }
+        
+        logoutBtn.addTapGestureRecognizer {
+            let alert = UIAlertController(title: "Logout", message: "Are you sure you want to logout ?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+                self.dismiss(animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "No", style: .cancel))
+            
+            self.present(alert, animated: true)
+          
+        }
 
     }
 

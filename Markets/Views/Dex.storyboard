@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5M-iz-G77" userLabel="ContainerTextField">
-                                <rect key="frame" x="10" y="103" width="373" height="50"/>
+                                <rect key="frame" x="10" y="59" width="373" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w5y-1J-KhF">
                                         <rect key="frame" x="10" y="13.999999999999996" width="24" height="22.333333333333332"/>
@@ -46,7 +46,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YZ0-Ek-d2O">
-                                <rect key="frame" x="0.0" y="183" width="393" height="586"/>
+                                <rect key="frame" x="0.0" y="139" width="393" height="630"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lZU-5q-iKk">
                                     <size key="itemSize" width="128" height="128"/>
@@ -82,21 +82,31 @@
                     <connections>
                         <outlet property="collectionView" destination="YZ0-Ek-d2O" id="cNq-KD-bul"/>
                         <outlet property="containerTextField" destination="a5M-iz-G77" id="b4w-R8-fuk"/>
+                        <segue destination="JWK-U7-rMY" kind="show" identifier="showDetailsAsset" id="Qyj-Ap-s43"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996.18320610687022" y="-2.1126760563380285"/>
         </scene>
+        <!--detailsAssetVC-->
+        <scene sceneID="BlG-Oq-89X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Nft" referencedIdentifier="detailsAssetVC" id="JWK-U7-rMY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fMI-d6-ihG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1p-W6-H6Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="-43"/>
+        </scene>
         <!--Search-->
         <scene sceneID="0nQ-4b-Jsu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lCJ-g6-Hiq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lCJ-g6-Hiq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="Ake-Ai-yYn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9H-k3-eKR">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

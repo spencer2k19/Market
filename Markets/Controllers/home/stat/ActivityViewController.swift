@@ -12,6 +12,7 @@ class ActivityViewController: PagerViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     var activityData: [ActivityData] = [
     ActivityData(imageAsset: "nft1", username: "April Curtis", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563"),
     
@@ -33,6 +34,7 @@ class ActivityViewController: PagerViewController {
         collectionView.dataSource = self
         collectionView.collectionViewLayout = createMainCollectionLayout()
         collectionView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellWithReuseIdentifier: ActivityCell.identifier)
+        
         
         
     }
@@ -66,6 +68,10 @@ class ActivityViewController: PagerViewController {
 extension ActivityViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        pagerDelegate?.onViewAssetDetails()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

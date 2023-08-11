@@ -144,6 +144,12 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            self.performSegue(withIdentifier: "showDetailsAsset", sender: self)
+        }
+    }
+    
     
 
     
