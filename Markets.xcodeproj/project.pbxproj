@@ -45,6 +45,8 @@
 		B685ECCD2A83E1B9007E5A4B /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */; };
 		B685ECCF2A83EDBA007E5A4B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECCE2A83EDBA007E5A4B /* NotificationViewController.swift */; };
 		B685ECD12A844158007E5A4B /* BillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685ECD02A844158007E5A4B /* BillingViewController.swift */; };
+		B6C364B12A88E4BA004B4478 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364B02A88E4BA004B4478 /* Input.swift */; };
+		B6C364B72A8BD965004B4478 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364B62A8BD965004B4478 /* LoginViewModel.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -144,6 +146,8 @@
 		B685ECCC2A83E1B9007E5A4B /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		B685ECCE2A83EDBA007E5A4B /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		B685ECD02A844158007E5A4B /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
+		B6C364B02A88E4BA004B4478 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		B6C364B62A8BD965004B4478 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -310,9 +314,9 @@
 		B67ECFEA2A66AECC0052CA79 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B6C364B52A8BD946004B4478 /* login */,
 				B6FC015A2A698F5500BD56D9 /* forgotPassword */,
 				B60A64692A693159009EB2F4 /* register */,
-				B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -399,6 +403,15 @@
 				B685ECD02A844158007E5A4B /* BillingViewController.swift */,
 			);
 			path = profil;
+			sourceTree = "<group>";
+		};
+		B6C364B52A8BD946004B4478 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				B67ECFEB2A66AFAA0052CA79 /* LoginViewController.swift */,
+				B6C364B62A8BD965004B4478 /* LoginViewModel.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
@@ -546,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				B6FC01CB2A77EBEF00BD56D9 /* MenuTitleTabView.swift */,
+				B6C364B02A88E4BA004B4478 /* Input.swift */,
 			);
 			path = customViews;
 			sourceTree = "<group>";
@@ -739,6 +753,7 @@
 				B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */,
 				B6FC01672A6C7CB900BD56D9 /* Slide.swift in Sources */,
 				B6FC01AE2A72BA2500BD56D9 /* WalletTypeCell.swift in Sources */,
+				B6C364B72A8BD965004B4478 /* LoginViewModel.swift in Sources */,
 				B6FC01B52A73C92600BD56D9 /* NSMutableAttributedString.swift in Sources */,
 				B6FC016B2A6C833100BD56D9 /* SlideData.swift in Sources */,
 				B685EC9E2A80ED6B007E5A4B /* StatsHomeViewController.swift in Sources */,
@@ -765,6 +780,7 @@
 				B685ECC52A826994007E5A4B /* TrendingCollectionView.swift in Sources */,
 				B6FC01B92A75351400BD56D9 /* TermServiceViewController.swift in Sources */,
 				B6FC01782A6D53A500BD56D9 /* HomeTabViewController.swift in Sources */,
+				B6C364B12A88E4BA004B4478 /* Input.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
