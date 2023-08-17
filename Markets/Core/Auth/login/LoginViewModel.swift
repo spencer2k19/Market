@@ -18,9 +18,11 @@ class LoginViewModel {
         
         if value.isEmpty {
             errorMsgForEmail = "*Please enter your email address"
+            return
         }
         if !isEmailValid(value) {
             errorMsgForEmail = "*Please enter an valid email address"
+            return
         }
         
         
@@ -37,6 +39,12 @@ class LoginViewModel {
       
         if value.isEmpty  {
             errorMsgForPassword = "*Please an valid password"
+            return
+        }
+        
+        if value.count < 8 {
+            errorMsgForPassword = "Password length must be at least 8 character"
+            return
         }
     }
     

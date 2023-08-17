@@ -10,10 +10,6 @@ import Combine
 
 class LoginViewController: UIViewController {
 
-    @Published var email = ""
-    @Published var hasError = false
-    
-    
     
     private var viewModel: LoginViewModel = LoginViewModel()
     private var subscriptions = Set<AnyCancellable>()
@@ -35,10 +31,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorEmailLabel: UILabel!
     @IBOutlet weak var errorPasswordLabel: UILabel!
    
-    
-    //subscriber
-    private var subscriber: AnyCancellable?
-    
     
    
     
@@ -97,6 +89,8 @@ class LoginViewController: UIViewController {
         ]
     }
     
+    
+    //email subscription
     private func emailSubscription() -> AnyCancellable {
         return viewModel.$errorMsgForEmail
             .receive(on: DispatchQueue.main)
@@ -115,6 +109,8 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    //secure text entry subscription
     private func secureTextEntrySubscription() -> AnyCancellable {
         return viewModel.$isSecuredTextEntry
             .receive(on: DispatchQueue.main)
@@ -128,6 +124,8 @@ class LoginViewController: UIViewController {
     }
     
     
+    
+    //password subscription
     private func passwordSubscription() -> AnyCancellable {
         return viewModel.$errorMsgForPassword
             .receive(on: DispatchQueue.main)
@@ -143,6 +141,8 @@ class LoginViewController: UIViewController {
             
     }
     
+    
+    //show home
     private func showHome() {
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let homeTabVC = storyBoard.instantiateViewController(withIdentifier: "homeTabVC")

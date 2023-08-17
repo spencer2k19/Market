@@ -6,38 +6,56 @@
 //
 
 import UIKit
+import Combine
 
 
 
 class AssetsViewController: PagerViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    private let viewModel: AssetsViewModel = AssetsViewModel()
+    private var subscriptions = Set<AnyCancellable>()
     
-    
-    
-    var assets: [AssetData] = [
-        AssetData(imageAsset: "btc", priceAsset: "35,908 BTC", priceConverted: "$5,348,156,547",
-                  priceUser: "$20,556,2", variation: "+4.45%"),
-        
-        AssetData(imageAsset: "ethereum", priceAsset: "33,790 ETH", priceConverted: "$3,578,425,412",
-                  priceUser: "$11,21", variation: "+1.81%"),
-        
-        AssetData(imageAsset: "ltc", priceAsset: "11,981 LTC", priceConverted: "$2,721,989,499",
-                  priceUser: "$52.94", variation: "-3.14%"),
-        
-        AssetData(imageAsset: "doge", priceAsset: "655 DOGE", priceConverted: "$1,026,291,589",
-                  priceUser: "$1,128,18", variation: "-8.85%")
-    ]
-    
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.register(UINib(nibName: "AssetCell", bundle: nil), forCellReuseIdentifier: AssetCell.identifier)
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = 80
         tableView.dataSource = self
         tableView.delegate = self
         tableView.contentInset.bottom = 40
+        
+        bindToViewModel()
+    }
+    
+    private func bindToViewModel() {
+        subscriptions = [
+            assetsSubscription(),
+            progressSubscription(),
+        ]
+    }
+    
+    private func assetsSubscription() -> AnyCancellable {
+        return viewModel.$assets
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.tableView.reloadData()
+        }
+    }
+    
+    private func progressSubscription() -> AnyCancellable {
+        return viewModel.$inProgress.receive(on: DispatchQueue.main)
+            .sink { [weak self] inProgress in
+                
+                if inProgress {
+                    self?.progressView.startAnimating()
+                } else {
+                    self?.progressView.stopAnimating()
+                }
+            }
     }
 }
 
@@ -45,14 +63,14 @@ class AssetsViewController: PagerViewController {
 extension AssetsViewController: UITableViewDataSource, UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return assets.count
+        return viewModel.assets.count
     }
     
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AssetCell.identifier, for: indexPath) as? AssetCell {
-            cell.assetData = self.assets[indexPath.row]
+            cell.assetData = self.viewModel.assets[indexPath.row]
             return cell
         }
         
