@@ -53,6 +53,8 @@
 		B6C364C02A8E15C6004B4478 /* StatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364BF2A8E15C6004B4478 /* StatsService.swift */; };
 		B6C364C32A8E1837004B4478 /* AssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364C22A8E1837004B4478 /* AssetsViewModel.swift */; };
 		B6C364C62A8E2CE4004B4478 /* WalletManageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364C52A8E2CE4004B4478 /* WalletManageViewModel.swift */; };
+		B6C364C92A8E8595004B4478 /* PopularNftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364C82A8E8595004B4478 /* PopularNftViewModel.swift */; };
+		B6C364CC2A8E89A8004B4478 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -160,6 +162,8 @@
 		B6C364BF2A8E15C6004B4478 /* StatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsService.swift; sourceTree = "<group>"; };
 		B6C364C22A8E1837004B4478 /* AssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewModel.swift; sourceTree = "<group>"; };
 		B6C364C52A8E2CE4004B4478 /* WalletManageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManageViewModel.swift; sourceTree = "<group>"; };
+		B6C364C82A8E8595004B4478 /* PopularNftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularNftViewModel.swift; sourceTree = "<group>"; };
+		B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -456,6 +460,24 @@
 			path = manage;
 			sourceTree = "<group>";
 		};
+		B6C364C72A8E8583004B4478 /* popular */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01C02A77BDD000BD56D9 /* PopularNftViewController.swift */,
+				B6C364C82A8E8595004B4478 /* PopularNftViewModel.swift */,
+			);
+			path = popular;
+			sourceTree = "<group>";
+		};
+		B6C364CA2A8E8987004B4478 /* markets */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC01C22A77BDE100BD56D9 /* MarketNftViewController.swift */,
+				B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */,
+			);
+			path = markets;
+			sourceTree = "<group>";
+		};
 		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,9 +591,9 @@
 		B6FC01BC2A77B7FE00BD56D9 /* nft */ = {
 			isa = PBXGroup;
 			children = (
+				B6C364CA2A8E8987004B4478 /* markets */,
+				B6C364C72A8E8583004B4478 /* popular */,
 				B6FC01BD2A77B81D00BD56D9 /* NftHomeViewController.swift */,
-				B6FC01C02A77BDD000BD56D9 /* PopularNftViewController.swift */,
-				B6FC01C22A77BDE100BD56D9 /* MarketNftViewController.swift */,
 				B6FC01C42A77BDF700BD56D9 /* PrimaryNftViewController.swift */,
 				B6FC01EC2A7D0A1500BD56D9 /* DetailsAssetViewController.swift */,
 				B685EC932A7E9F2E007E5A4B /* ConfirmPurchaseViewController.swift */,
@@ -767,6 +789,7 @@
 				B6FC01C92A77E9FD00BD56D9 /* TitleTabCell.swift in Sources */,
 				B685ECCD2A83E1B9007E5A4B /* SecurityViewController.swift in Sources */,
 				B6FC01D72A79CAB000BD56D9 /* DisplayType.swift in Sources */,
+				B6C364CC2A8E89A8004B4478 /* MarketViewModel.swift in Sources */,
 				B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */,
 				B6FC01862A708C7A00BD56D9 /* PagerViewController.swift in Sources */,
 				B6FC01C52A77BDF700BD56D9 /* PrimaryNftViewController.swift in Sources */,
@@ -783,6 +806,7 @@
 				B67ECFD82A66AD760052CA79 /* ViewController.swift in Sources */,
 				B6FC01822A70881B00BD56D9 /* WalletViewController.swift in Sources */,
 				B685ECCF2A83EDBA007E5A4B /* NotificationViewController.swift in Sources */,
+				B6C364C92A8E8595004B4478 /* PopularNftViewModel.swift in Sources */,
 				B6FC01EA2A7B127800BD56D9 /* CollectionHeaderView.swift in Sources */,
 				B60A646D2A697C3E009EB2F4 /* PhoneVerificationViewController.swift in Sources */,
 				B6C364BA2A8E15A4004B4478 /* WalletService.swift in Sources */,

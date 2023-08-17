@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 
 
@@ -13,21 +14,8 @@ import UIKit
 class PopularNftViewController: PagerViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var popularNftData: [NftData] = [
-        NftData(name: "Rebels-NightCard#", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft1",variation: "",user: "@jailyn1509"),
-        NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft2",variation: "",user: ""),
-        NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft3",variation: "",user: ""),
-        NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft4",variation: "",user: ""),
-        NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft5",variation: "",user: ""),
-      ]
-    
-    var nftCollection: [NftData] = [
-        NftData(name: "Bored Ape Yacht Club", number: "#56382", price: "5,4563", favoriteNumber: "10", asset: "collection1",variation: "+23,00%",user: "@jailyn1509"),
-        NftData(name: "Dejah Zulauf", number: "#56382", price: "5,0157", favoriteNumber: "10", asset: "collection2",variation: "-31,20%",user: "@Dejah09"),
-        NftData(name: "Jailyn Crona", number: "#56382", price: "5,4563", favoriteNumber: "10", asset: "collection3",variation: "+23,00%",user: "@Deroah56"),
-       ]
-    
-    
+    private let viewModel: PopularNftViewModel = PopularNftViewModel()
+    private var subscriptions = Set<AnyCancellable>()
     
     
     override func viewDidLoad() {
@@ -42,6 +30,9 @@ class PopularNftViewController: PagerViewController {
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionHeaderView.identifier)
         
         collectionView.register(UINib(nibName: "NftCollectionCell", bundle: nil), forCellWithReuseIdentifier: NftCollectionCell.identifier)
+        
+        //viewmodel subscription
+        bindToViewModel()
         
     }
     
@@ -63,14 +54,12 @@ class PopularNftViewController: PagerViewController {
                         heightDimension: .fractionalHeight(1)
                     )
                 )
-                let group = NSCollectionLayoutGroup.horizontal(
-                    layoutSize: NSCollectionLayoutSize(
-                        widthDimension: .fractionalWidth(0.6),
-                        heightDimension: .absolute(300)
-                    ),
-                    subitem: item,
-                   count: 1
-                )
+                
+               let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.6),
+                    heightDimension: .absolute(300)
+                ), subitems: [item])
+               
                 group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
                 let listSection = NSCollectionLayoutSection(group: group)
                 listSection.orthogonalScrollingBehavior = .continuous
@@ -109,14 +98,43 @@ class PopularNftViewController: PagerViewController {
 }
 
 
+//MARK: - ViewModel subscription
+extension PopularNftViewController {
+    private func bindToViewModel() {
+        subscriptions = [
+        nftDataSubscription(),
+        popularNftSubscription()
+        
+        ]
+    }
+    
+    private func nftDataSubscription() -> AnyCancellable {
+        return viewModel.$nftCollection.receive(on: DispatchQueue.main)
+            .sink { [weak self] returnedNftData in
+                self?.collectionView.reloadData()
+            }
+    }
+    
+    private func popularNftSubscription() -> AnyCancellable {
+        return viewModel.$popularNftData.receive(on: DispatchQueue.main)
+            .sink { [weak self] returnedPopularNftData in
+                self?.collectionView.reloadData()
+            }
+    }
+    
+    
+    
+}
+
+
 
 //MARK: - Collection view delegate and datasource
 extension PopularNftViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return popularNftData.count
+            return viewModel.popularNftData.count
         }
-        return nftCollection.count
+        return viewModel.nftCollection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -130,12 +148,12 @@ extension PopularNftViewController: UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularNftCell.identifier, for: indexPath) as? PopularNftCell {
-                cell.nftData = popularNftData[indexPath.row]
+                cell.nftData = viewModel.popularNftData[indexPath.row]
                 return cell
             }
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NftCollectionCell.identifier, for: indexPath) as? NftCollectionCell {
-                cell.nftData = nftCollection[indexPath.row]
+                cell.nftData = viewModel.nftCollection[indexPath.row]
                 return cell
             }
         }

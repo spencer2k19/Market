@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class MarketNftViewController: PagerViewController {
 
@@ -13,13 +14,9 @@ class MarketNftViewController: PagerViewController {
     @IBOutlet weak var formatImage: UIImageView!
     var currentLayout: DisplayType = .pellicule
     
-    var data: [NftData] = [
-    NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft1",variation: "",user: ""),
-    NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft2",variation: "",user: ""),
-    NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft3",variation: "",user: ""),
-    NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft4",variation: "",user: ""),
-    NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft5",variation: "",user: ""),
-    NftData(name: "Neon District... One Item", number: "#56382", price: "10.01", favoriteNumber: "10", asset: "nft6",variation: "",user: "")]
+    private let viewModel = MarketViewModel()
+    private var subscriptions = Set<AnyCancellable>()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +24,9 @@ class MarketNftViewController: PagerViewController {
         let toggleLayoutRecognizer = UITapGestureRecognizer(target: self, action: #selector(toggleContentLayout(_:)))
         formatImage.isUserInteractionEnabled = true
         formatImage.addGestureRecognizer(toggleLayoutRecognizer)
+        
+        //viewmodel
+        bindToViewModel()
     }
     
     
@@ -60,6 +60,24 @@ extension MarketNftViewController {
 }
 
 
+
+//MARK: - View Model handling
+extension MarketNftViewController {
+    private func bindToViewModel() {
+        subscriptions = [
+            dataSubscription()
+        ]
+    }
+    
+    private func dataSubscription() -> AnyCancellable {
+        return viewModel.$nftData.receive(on: DispatchQueue.main)
+            .sink { [weak self] returnedData in
+                self?.collectionView.reloadData()
+            }
+    }
+}
+
+
 //MARK: - Handle collection view
 extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -69,7 +87,7 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return viewModel.nftData.count
     }
     
     
@@ -84,12 +102,12 @@ extension MarketNftViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(currentLayout == .pellicule) {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NftGridCell.identifier, for: indexPath) as? NftGridCell {
-                cell.nftData = self.data[indexPath.row]
+                cell.nftData = self.viewModel.nftData[indexPath.row]
                 return cell
             }
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NftListCell.identifier, for: indexPath) as? NftListCell {
-                cell.nftData = self.data[indexPath.row]
+                cell.nftData = self.viewModel.nftData[indexPath.row]
                 return cell
             }
         }
