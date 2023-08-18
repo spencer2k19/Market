@@ -91,7 +91,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoR-5P-m7h">
-                                <rect key="frame" x="277" y="68.666666666666671" width="106" height="34.999999999999986"/>
+                                <rect key="frame" x="277" y="68.666666666666671" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.down.fill" catalog="system" imagePlacement="trailing" title="All Chains" imagePadding="4">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
@@ -127,6 +127,9 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1wg-0w-als">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zta-Jd-PQ8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,13 +141,16 @@
                             <constraint firstItem="H8V-6Z-iJM" firstAttribute="centerY" secondItem="QoR-5P-m7h" secondAttribute="centerY" id="DNj-oZ-LoK"/>
                             <constraint firstItem="R3C-Gb-TXn" firstAttribute="top" secondItem="QoR-5P-m7h" secondAttribute="bottom" constant="10" id="Ijy-ZM-44j"/>
                             <constraint firstItem="R3C-Gb-TXn" firstAttribute="leading" secondItem="zta-Jd-PQ8" secondAttribute="leading" id="ScF-BB-sUK"/>
+                            <constraint firstItem="1wg-0w-als" firstAttribute="centerX" secondItem="Lyd-a0-5Yk" secondAttribute="centerX" id="bRV-vY-PMW"/>
                             <constraint firstItem="QoR-5P-m7h" firstAttribute="centerY" secondItem="vFp-Cy-Vp4" secondAttribute="centerY" id="bYN-no-i3w"/>
                             <constraint firstItem="QoR-5P-m7h" firstAttribute="leading" secondItem="H8V-6Z-iJM" secondAttribute="trailing" constant="5" id="j7Z-Je-leZ"/>
                             <constraint firstItem="vFp-Cy-Vp4" firstAttribute="top" secondItem="zta-Jd-PQ8" secondAttribute="top" constant="10" id="jav-my-zXz"/>
+                            <constraint firstItem="1wg-0w-als" firstAttribute="centerY" secondItem="Lyd-a0-5Yk" secondAttribute="centerY" id="yLn-kq-zHX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="R3C-Gb-TXn" id="Bsc-GF-E6t"/>
+                        <outlet property="progressView" destination="1wg-0w-als" id="PgU-xg-CBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhV-Nc-NPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -204,10 +210,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3Wr-ct-Mek">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oUX-7a-FHu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3Wr-ct-Mek" firstAttribute="centerY" secondItem="fby-E0-kX4" secondAttribute="centerY" id="3Q9-7V-1No"/>
                             <constraint firstItem="WbY-gP-dnG" firstAttribute="leading" secondItem="oUX-7a-FHu" secondAttribute="leading" id="5pH-7r-D88"/>
                             <constraint firstItem="oUX-7a-FHu" firstAttribute="bottom" secondItem="WbY-gP-dnG" secondAttribute="bottom" id="8Uf-N7-RN4"/>
                             <constraint firstItem="WbY-gP-dnG" firstAttribute="top" secondItem="5G1-VX-ome" secondAttribute="bottom" constant="10" id="8lj-Vu-H7R"/>
@@ -218,10 +228,12 @@
                             <constraint firstItem="2aP-td-tb6" firstAttribute="leading" secondItem="Y3P-YT-1zu" secondAttribute="trailing" constant="5" id="hVZ-kG-YNA"/>
                             <constraint firstItem="oUX-7a-FHu" firstAttribute="trailing" secondItem="WbY-gP-dnG" secondAttribute="trailing" id="nUQ-ZQ-Ryi"/>
                             <constraint firstItem="2aP-td-tb6" firstAttribute="centerY" secondItem="5G1-VX-ome" secondAttribute="centerY" id="x31-l0-wf9"/>
+                            <constraint firstItem="3Wr-ct-Mek" firstAttribute="centerX" secondItem="fby-E0-kX4" secondAttribute="centerX" id="zv8-Zf-AzN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="WbY-gP-dnG" id="X79-XK-sNH"/>
+                        <outlet property="progressView" destination="3Wr-ct-Mek" id="OO1-E4-rCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aip-ZB-y0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

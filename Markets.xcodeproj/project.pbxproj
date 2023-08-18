@@ -55,6 +55,8 @@
 		B6C364C62A8E2CE4004B4478 /* WalletManageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364C52A8E2CE4004B4478 /* WalletManageViewModel.swift */; };
 		B6C364C92A8E8595004B4478 /* PopularNftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364C82A8E8595004B4478 /* PopularNftViewModel.swift */; };
 		B6C364CC2A8E89A8004B4478 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */; };
+		B6C364D32A8F73B9004B4478 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364D22A8F73B9004B4478 /* RankingViewModel.swift */; };
+		B6C364D52A8F7739004B4478 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364D42A8F7739004B4478 /* ActivityViewModel.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -164,6 +166,8 @@
 		B6C364C52A8E2CE4004B4478 /* WalletManageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManageViewModel.swift; sourceTree = "<group>"; };
 		B6C364C82A8E8595004B4478 /* PopularNftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularNftViewModel.swift; sourceTree = "<group>"; };
 		B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		B6C364D22A8F73B9004B4478 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		B6C364D42A8F7739004B4478 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -350,9 +354,9 @@
 		B685EC9C2A80ED4D007E5A4B /* stat */ = {
 			isa = PBXGroup;
 			children = (
+				B6C364D12A8F739F004B4478 /* activity */,
+				B6C364D02A8F7391004B4478 /* ranking */,
 				B685EC9D2A80ED6B007E5A4B /* StatsHomeViewController.swift */,
-				B685EC9F2A80EECC007E5A4B /* RankingsViewController.swift */,
-				B685ECA12A80EEDC007E5A4B /* ActivityViewController.swift */,
 			);
 			path = stat;
 			sourceTree = "<group>";
@@ -476,6 +480,24 @@
 				B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */,
 			);
 			path = markets;
+			sourceTree = "<group>";
+		};
+		B6C364D02A8F7391004B4478 /* ranking */ = {
+			isa = PBXGroup;
+			children = (
+				B685EC9F2A80EECC007E5A4B /* RankingsViewController.swift */,
+				B6C364D22A8F73B9004B4478 /* RankingViewModel.swift */,
+			);
+			path = ranking;
+			sourceTree = "<group>";
+		};
+		B6C364D12A8F739F004B4478 /* activity */ = {
+			isa = PBXGroup;
+			children = (
+				B685ECA12A80EEDC007E5A4B /* ActivityViewController.swift */,
+				B6C364D42A8F7739004B4478 /* ActivityViewModel.swift */,
+			);
+			path = activity;
 			sourceTree = "<group>";
 		};
 		B6FC015A2A698F5500BD56D9 /* forgotPassword */ = {
@@ -814,6 +836,7 @@
 				B6FC017B2A6EE88600BD56D9 /* MenuTabsView.swift in Sources */,
 				B685ECB62A8236DC007E5A4B /* CollectionCell.swift in Sources */,
 				B6C364C32A8E1837004B4478 /* AssetsViewModel.swift in Sources */,
+				B6C364D32A8F73B9004B4478 /* RankingViewModel.swift in Sources */,
 				B6FC01D12A78099B00BD56D9 /* NftGridCell.swift in Sources */,
 				B6FC01C32A77BDE100BD56D9 /* MarketNftViewController.swift in Sources */,
 				B685ECAF2A823514007E5A4B /* RecentSearchCell.swift in Sources */,
@@ -839,6 +862,7 @@
 				B6FC01ED2A7D0A1500BD56D9 /* DetailsAssetViewController.swift in Sources */,
 				B67ECFD62A66AD760052CA79 /* SceneDelegate.swift in Sources */,
 				B6FC017D2A6FCFF600BD56D9 /* UIView.swift in Sources */,
+				B6C364D52A8F7739004B4478 /* ActivityViewModel.swift in Sources */,
 				B60A646B2A693176009EB2F4 /* VerifyViewController.swift in Sources */,
 				B685EC9A2A80DF70007E5A4B /* StatCell.swift in Sources */,
 				B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */,

@@ -6,33 +6,18 @@
 //
 
 import UIKit
+import Combine
 
 class RankingsViewController: PagerViewController {
 
    
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
+    private let vm = RankingViewModel()
+    private var subscriptions = Set<AnyCancellable>()
     
-    var statsData:[StatData] = [
-    StatData(imageAsset: "ranking1", name: "Rick Wright", pseudo: "@WillieTanner", price: "15,103", variation: "+23,00%", coinImageAsset: "mdi_ethereum"),
-    
-    StatData(imageAsset: "ranking2", name: "Dr. Bonnie Barstow ", pseudo: "@MikeTorello", price: "10,815", variation: "+18,00%", coinImageAsset: "mdi_ethereum"),
-    
-    StatData(imageAsset: "ranking3", name: "Dori Doreau", pseudo: "@ThomasMagnum", price: "9,071", variation: "+15,00%", coinImageAsset: "mdi_ethereum"),
-    
-    StatData(imageAsset: "ranking4", name: "Lynn Tanner", pseudo: "@RickWright", price: "7,221", variation: "-32,00%", coinImageAsset: "mdi_ethereum"),
-    
-    
-    StatData(imageAsset: "ranking5", name: "Thomas Magnum", pseudo: "@WillieTanner", price: "3,302", variation: "+36,00%", coinImageAsset: "btc"),
-    
-    
-    
-    
-    
-    
-    ]
-  
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -42,7 +27,7 @@ class RankingsViewController: PagerViewController {
         collectionView.register(UINib(nibName: "StatCell", bundle: nil), forCellWithReuseIdentifier: StatCell.identifier)
         
         
-        
+        bindToViewModel()
         
     }
     
@@ -72,6 +57,30 @@ class RankingsViewController: PagerViewController {
 
 
 
+//MARK: - View model subscriptions
+extension RankingsViewController {
+    private func bindToViewModel() {
+        subscriptions = [
+        loadingSubscription(),
+        dataSubscriptions()
+        ]
+    }
+    
+    private func loadingSubscription() -> AnyCancellable {
+        return vm.$isLoading.receive(on: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                isLoading ? self?.progressView.startAnimating() : self?.progressView.stopAnimating()
+            }
+    }
+    
+    private func dataSubscriptions() -> AnyCancellable {
+        return vm.$statsData.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.collectionView.reloadData()
+            }
+    }
+}
+
 //MARK: - Collection view delegate and datasource
 extension RankingsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -83,13 +92,13 @@ extension RankingsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return statsData.count
+        return vm.statsData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StatCell.identifier, for: indexPath) as? StatCell {
             cell.numberField.text = String(indexPath.row + 1)
-            cell.statData = statsData[indexPath.row]
+            cell.statData = vm.statsData[indexPath.row]
             return cell
         }
         

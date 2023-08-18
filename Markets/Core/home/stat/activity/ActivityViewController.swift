@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import Combine
 
 class ActivityViewController: PagerViewController {
     
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
+    
+    private let vm = ActivityViewModel()
+    private var subscriptions = Set<AnyCancellable>()
     
     var activityData: [ActivityData] = [
     ActivityData(imageAsset: "nft1", username: "April Curtis", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563"),
@@ -34,7 +39,7 @@ class ActivityViewController: PagerViewController {
         collectionView.dataSource = self
         collectionView.collectionViewLayout = createMainCollectionLayout()
         collectionView.register(UINib(nibName: "ActivityCell", bundle: nil), forCellWithReuseIdentifier: ActivityCell.identifier)
-        
+        bindToViewModel()
         
         
     }
@@ -63,6 +68,33 @@ class ActivityViewController: PagerViewController {
 }
 
 
+
+//MARK: - View model subscriptions
+extension ActivityViewController {
+    private func bindToViewModel() {
+        subscriptions = [
+        loadingSubscription(),
+        dataSubscriptions()
+        ]
+    }
+    
+    private func loadingSubscription() -> AnyCancellable {
+        return vm.$isLoading.receive(on: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                isLoading ? self?.progressView.startAnimating() : self?.progressView.stopAnimating()
+            }
+    }
+    
+    private func dataSubscriptions() -> AnyCancellable {
+        return vm.$activityData.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.collectionView.reloadData()
+            }
+    }
+}
+
+
+
 //MARK: - Collection view delegate and datasource
 
 extension ActivityViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -75,12 +107,12 @@ extension ActivityViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return activityData.count
+        return vm.activityData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ActivityCell.identifier, for: indexPath) as? ActivityCell {
-            cell.activityData = activityData[indexPath.row]
+            cell.activityData = vm.activityData[indexPath.row]
             return cell
         }
         return UICollectionViewCell()
