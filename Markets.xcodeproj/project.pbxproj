@@ -57,6 +57,7 @@
 		B6C364CC2A8E89A8004B4478 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */; };
 		B6C364D32A8F73B9004B4478 /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364D22A8F73B9004B4478 /* RankingViewModel.swift */; };
 		B6C364D52A8F7739004B4478 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C364D42A8F7739004B4478 /* ActivityViewModel.swift */; };
+		B6E0451C2A93657D001140D7 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E0451B2A93657D001140D7 /* SearchViewModel.swift */; };
 		B6FC015C2A699A7800BD56D9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */; };
 		B6FC015E2A699A8400BD56D9 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */; };
 		B6FC01612A6C773000BD56D9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */; };
@@ -168,6 +169,7 @@
 		B6C364CB2A8E89A8004B4478 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		B6C364D22A8F73B9004B4478 /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 		B6C364D42A8F7739004B4478 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		B6E0451B2A93657D001140D7 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		B6FC015B2A699A7800BD56D9 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		B6FC015D2A699A8400BD56D9 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B6FC01602A6C773000BD56D9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				B685ECBB2A823E38007E5A4B /* SearchViewController.swift */,
+				B6E0451B2A93657D001140D7 /* SearchViewModel.swift */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 				B6FC01B72A75293000BD56D9 /* UITapGestureRecognizer.swift in Sources */,
 				B685ECCB2A83DA42007E5A4B /* AccountViewController.swift in Sources */,
 				B685EC962A7FFCAF007E5A4B /* SuccessfullBidViewController.swift in Sources */,
+				B6E0451C2A93657D001140D7 /* SearchViewModel.swift in Sources */,
 				B6FC01BE2A77B81D00BD56D9 /* NftHomeViewController.swift in Sources */,
 				B6FC01C12A77BDD000BD56D9 /* PopularNftViewController.swift in Sources */,
 				B67ECFEC2A66AFAA0052CA79 /* LoginViewController.swift in Sources */,

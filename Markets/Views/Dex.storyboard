@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -29,16 +30,27 @@
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Zo-GJ-Ipx">
-                                        <rect key="frame" x="44" y="0.0" width="329" height="50"/>
+                                        <rect key="frame" x="44" y="0.0" width="289" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5mT-fG-RW6">
+                                        <rect key="frame" x="343" y="17.666666666666664" width="20" height="15"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="4mQ-27-75J"/>
+                                            <constraint firstAttribute="height" constant="20" id="Lmy-4O-Ue8"/>
+                                        </constraints>
+                                        <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4QA-ed-KSD"/>
+                                    <constraint firstItem="5mT-fG-RW6" firstAttribute="centerY" secondItem="a5M-iz-G77" secondAttribute="centerY" id="8qT-g0-kAa"/>
+                                    <constraint firstAttribute="trailing" secondItem="5mT-fG-RW6" secondAttribute="trailing" constant="10" id="C1I-IT-4ps"/>
                                     <constraint firstItem="1Zo-GJ-Ipx" firstAttribute="top" secondItem="a5M-iz-G77" secondAttribute="top" id="Xdw-tp-ySA"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Zo-GJ-Ipx" secondAttribute="trailing" id="cPG-9R-6nQ"/>
+                                    <constraint firstItem="5mT-fG-RW6" firstAttribute="leading" secondItem="1Zo-GJ-Ipx" secondAttribute="trailing" constant="10" id="cPG-9R-6nQ"/>
                                     <constraint firstAttribute="bottom" secondItem="1Zo-GJ-Ipx" secondAttribute="bottom" id="eu4-6p-6bv"/>
                                     <constraint firstItem="1Zo-GJ-Ipx" firstAttribute="leading" secondItem="w5y-1J-KhF" secondAttribute="trailing" constant="10" id="nAk-7Q-2df"/>
                                     <constraint firstItem="w5y-1J-KhF" firstAttribute="centerY" secondItem="a5M-iz-G77" secondAttribute="centerY" id="wP9-zw-HXY"/>
@@ -82,6 +94,8 @@
                     <connections>
                         <outlet property="collectionView" destination="YZ0-Ek-d2O" id="cNq-KD-bul"/>
                         <outlet property="containerTextField" destination="a5M-iz-G77" id="b4w-R8-fuk"/>
+                        <outlet property="resetSearch" destination="5mT-fG-RW6" id="d5d-pa-Hxd"/>
+                        <outlet property="searchTextField" destination="1Zo-GJ-Ipx" id="tnU-Xg-9Db"/>
                         <segue destination="JWK-U7-rMY" kind="show" identifier="showDetailsAsset" id="Qyj-Ap-s43"/>
                     </connections>
                 </viewController>
@@ -121,6 +135,7 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

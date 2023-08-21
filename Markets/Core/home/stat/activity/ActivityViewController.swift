@@ -18,20 +18,7 @@ class ActivityViewController: PagerViewController {
     private let vm = ActivityViewModel()
     private var subscriptions = Set<AnyCancellable>()
     
-    var activityData: [ActivityData] = [
-    ActivityData(imageAsset: "nft1", username: "April Curtis", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563"),
-    
-    ActivityData(imageAsset: "nft2", username: "Theodore T.C. Calvin", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563"),
-    
-    ActivityData(imageAsset: "nft3", username: "Jonathan Higgins", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563"),
-    
-    
-    ActivityData(imageAsset: "nft4", username: "Hannibal Smith", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563"),
-    
-    ActivityData(imageAsset: "nft5", username: "Willie Tanner", assetName: "Bored Ape Yacht Club #553123", date: "2 hour ago", price: "5,4563")
-    
-    ]
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 

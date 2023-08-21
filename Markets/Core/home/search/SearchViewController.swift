@@ -6,27 +6,22 @@
 //
 
 import UIKit
+import Combine
 
 class SearchViewController: UIViewController {
-
+    
     
     @IBOutlet weak var containerTextField: UIView!
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var resetSearch: UIImageView!
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    private let vm = SearchViewModel()
+    private var subscriptions = Set<AnyCancellable>()
     var recentSearchItems: [Category] = [
         Category(imageAsset: "category1", name: "Art"),
         Category(imageAsset: "category2", name: "Collectibles"),
         Category(imageAsset: "category3", name: "Domain"),
-    
-    
-    ]
-    var collectionItems: [CollectionData] = [
-        CollectionData(collectionAsset: "nft1", trendingImageAsset: "trending1", collectionName: "8SIAN Collection", trendingAssetName: "Alethea_AI"),
-        CollectionData(collectionAsset: "nft2", trendingImageAsset: "trending2", collectionName: "8SIAN Collection", trendingAssetName: "Alethea_AI"),
-        
-        CollectionData(collectionAsset: "nft3", trendingImageAsset: "trending3", collectionName: "8SIAN Collection", trendingAssetName: "Alethea_AI"),
-        CollectionData(collectionAsset: "nft4", trendingImageAsset: "trending4", collectionName: "8SIAN Collection", trendingAssetName: "Alethea_AI"),
-    
     ]
     
     
@@ -37,8 +32,8 @@ class SearchViewController: UIViewController {
         
     }
     
-
- 
+    
+    
 }
 
 extension SearchViewController {
@@ -66,6 +61,30 @@ extension SearchViewController {
         
         collectionView.register(UINib(nibName: "TrendingCollectionView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TrendingCollectionView.identifier)
         
+        
+        //search
+        searchTextField.addTarget(self, action: #selector(searchTextFieldDidChange(_:)), for: .editingChanged)
+        
+        
+        resetSearch.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onClear(_:))))
+        
+        
+        //view model
+        bindToViewModel()
+        
+    }
+    
+    
+    @objc func searchTextFieldDidChange(_ textField: UITextField) {
+        if let content = textField.text {
+            vm.onSearch(with: content)
+        }
+    }
+    
+    @objc func onClear(_ sender: UITapGestureRecognizer) {
+        searchTextField.resignFirstResponder()
+        searchTextField.text = ""
+        vm.onClear()
     }
     
     
@@ -87,9 +106,9 @@ extension SearchViewController {
                 
                 
                 section.boundarySupplementaryItems = [
-                  supplement
+                    supplement
                     
-                
+                    
                 ]
                 
                 
@@ -106,7 +125,7 @@ extension SearchViewController {
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(240)), subitems: [item])
                 
                 group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
-              
+                
                 let listSection = NSCollectionLayoutSection(group: group)
                 
                 let supplement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(30)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
@@ -114,8 +133,8 @@ extension SearchViewController {
                 
                 
                 listSection.boundarySupplementaryItems = [
-                  supplement
-                
+                    supplement
+                    
                 ]
                 
                 
@@ -125,6 +144,29 @@ extension SearchViewController {
             }
             
         }
+    }
+}
+
+
+//MARK: - Viewmodel subscribers
+extension SearchViewController {
+    private func bindToViewModel() {
+        subscriptions = [collectionItemSubscription(), searchTextSubscription()]
+    }
+    
+    private func collectionItemSubscription() -> AnyCancellable {
+        return vm.$collectionItems.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.collectionView.reloadData()
+            }
+        
+    }
+    
+    private func searchTextSubscription() -> AnyCancellable {
+        return vm.$searchText.receive(on: DispatchQueue.main)
+            .sink { [weak self] searchText in
+                self?.resetSearch.isHidden = searchText.isEmpty
+            }
     }
 }
 
@@ -140,7 +182,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         if section == 0 {
             return recentSearchItems.count
         } else {
-            return collectionItems.count
+            return vm.collectionItems.count
         }
     }
     
@@ -151,7 +193,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     
-
+    
     
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -181,7 +223,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             }
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionCell.identifier, for: indexPath) as? CollectionCell {
-                cell.collectionData = collectionItems[indexPath.row]
+                cell.collectionData = vm.collectionItems[indexPath.row]
                 return cell
             }
         }
