@@ -1,4 +1,4 @@
-# Markets- Template
+# Market- Template
 
 ## Description
 
