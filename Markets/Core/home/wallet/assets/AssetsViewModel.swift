@@ -19,7 +19,7 @@ class AssetsViewModel {
     
     init() {
         addSubscribers()
-        inProgress = true
+       
     }
     
     private func addSubscribers() {

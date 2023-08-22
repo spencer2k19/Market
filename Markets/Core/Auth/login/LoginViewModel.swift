@@ -38,7 +38,7 @@ class LoginViewModel {
         errorMsgForPassword = ""
       
         if value.isEmpty  {
-            errorMsgForPassword = "*Please an valid password"
+            errorMsgForPassword = "*Please enter an valid password"
             return
         }
         

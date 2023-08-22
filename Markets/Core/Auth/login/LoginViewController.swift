@@ -152,7 +152,11 @@ class LoginViewController: UIViewController {
     
 
   
-
+    @IBAction func showForgotPassword(_ sender: UIButton) {
+        print("forgot password is clicked")
+        performSegue(withIdentifier: "goToForgotPassword", sender: self)
+    }
+    
 }
 
 
